@@ -25,6 +25,8 @@ Complete laptop - 1440 * 900
     color: whitesmoke;
 }
 
+/* Additional components */
+
 .t-center{
     text-align: center;
 }
@@ -67,7 +69,12 @@ Complete laptop - 1440 * 900
     background-color: #FFE01C;
 }
 
-/* Presentation */
+.fill__icon{
+    width: 30px;
+}
+
+/* Header navigatior */
+
 .header__nav{
     display: flex;
     align-items: center;
@@ -78,15 +85,24 @@ Complete laptop - 1440 * 900
     padding: 0 15px;
 }
 
-.right__header__section{
+/* Header left section */
+
+.header__left__section{
+    display: flex;
+    width: 40%;
+}
+
+.header__sub__nav{
+    display: none;
+}
+
+/* Header right section */
+
+.header__right__section{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-grow: 4;
-}
-
-.left__header__section{
-    flex-grow: 1;
+    width: 50%;
 }
 
 .header__button{
@@ -99,23 +115,56 @@ Complete laptop - 1440 * 900
 .header__log__in{
     display: none;
 }
-/* Header */
+
+/* Header (main section) */
 
 .header{
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: space-around;
-    
+    align-items: center;
     min-height: 85vh;
     background-image: linear-gradient(rgb(3, 52, 110), rgb(2, 21, 38), rgb(3, 52, 110));
+}
+
+.header__main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header__main__description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 45vh;
+}
+
+.header__title, .hedaer__descriptive{
+    text-align: center;
 }
 
 .header__title{
     font-size: 36px;
 }
 
-/* New release */
+.hedaer__descriptive{
+    width: 90%;
+}
+
+.header__img{
+    width: 90%;
+    padding: 40px;
+    border-radius: 60px;
+}
+
+/* New release section */
+
+.release__div{
+    background-color: #536078;
+}
 
 .release{
     display: flex;
@@ -123,8 +172,22 @@ Complete laptop - 1440 * 900
     align-items: center;
     justify-content: space-around;
 
-    min-height: 80vh;
-    background-color: #536078;
+    min-height: 600px;
+}
+
+.release__description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    text-align: center;
+    min-height: 300px;
+    padding: 0 20px;
+}
+
+.right-icon, .left-icon{
+    display: none;
 }
 
 /* Escuelas destacadas de EDteam */
@@ -135,13 +198,35 @@ Complete laptop - 1440 * 900
     justify-content: space-evenly;
     align-items: center;
 
-    min-height: 110vh;
+    min-height: 920px;
+    text-align: center;
     background-color: #283752;
+}
+
+.carousel__div, .carousel__description{
+    width: 400px;
+}
+
+.carousel__div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 350px;
 }
 
 .carousel-img{
     width: 40%;
-    margin: 0 auto;
+}
+
+.carousel__list{
+    display: none;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    padding: 0;
+    margin: 0;
+    width: 100vw;
 }
 
 /* Explora otras escuelas de EDteam */
@@ -149,7 +234,7 @@ Complete laptop - 1440 * 900
 .course__container{
     display: flex;
 
-    width: 85vw;
+    width: 370px;
     padding: 20px;
     text-align: left;
     background-color: #536078;
@@ -157,15 +242,15 @@ Complete laptop - 1440 * 900
     border-radius: 15px;
 }
 
+.course__description__section{
+    width: 70%;
+}
+
 .course__description{
     font-size: 12px;
 }
 
-.description__section{
-    width: 70%;
-}
-
-.log__section{
+.course__log__section{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -174,8 +259,18 @@ Complete laptop - 1440 * 900
     width: 30%;
 }
 
-.img__course{
+.course__img{
     width: 70px;
+}
+
+.course__list{
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 0;
+    margin: 0;
+    width: 95vw;
 }
 
 /* Plan list */
@@ -238,7 +333,7 @@ Complete laptop - 1440 * 900
 /* Additional section */
 
 .span-message{
-    width: 90%;
+    width: 370px;
     font-size: 14px;
 }
 
@@ -247,8 +342,8 @@ Complete laptop - 1440 * 900
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    min-height: 40vh;
-    width: 85vw;
+    min-height: 372px;
+    width: 365px;
     background-color: #536078;
     padding: 25px;
     border-radius: 15px;
@@ -261,13 +356,16 @@ Complete laptop - 1440 * 900
 
 /* Additional message */
 
+.motivation__message{
+    background-color: #0C4DC2;
+}
+
 .additional__message{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
 
-    background-color: #0C4DC2;
     padding: 30px 20px;
     min-height: 40vh;
 }
@@ -277,47 +375,270 @@ Complete laptop - 1440 * 900
 .footer{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
 
-    min-height: 90vh;
     padding: 60px 20px;
     background-color: #283752;
     font-size: 14px;
 }
 
-.nav__footer{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    column-gap: 20px;
+.footer__list, .footer__list__container, .location__list, .icon__list{
+    padding: 0;
 }
 
-.footer__list{
-    padding: 0;
+.footer__list, .footer__list__container, .location__list, .icon__list, .footer__sub__title{
+    margin: 0;
 }
 
 .location__list{
-    display: flex;
-    justify-content: space-evenly;
-
-    padding: 0;
     font-size: 10px;
 }
 
-.icon__list{
+.location__list, .icon__list{
     display: flex;
-    justify-content: space-evenly;
-    padding: 0;
+    justify-content: space-around;
+
+    width: 95vw;
 }
 
-/* Media queries complete section */
+.footer__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    min-height: 450px;
+}
+
+.footer__list__container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.footer__sub__title{
+    font-size: 14px;
+}
+
+.footer__list{
+    width: 190px;
+}
+
+.footer__social__media{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    min-height: 55px;
+}
+
+/* Media queries*/
 
 @media screen and (min-width: 1440px) {
-    .header__bar{
+
+    .header{
+        justify-content: space-evenly;
+        min-height: 480px;
+    }
+
+    /* Right header section */
+    .header-right-nav-item-1{
+        order: 3;
+    }
+
+    .header__button{
+        font-size: 16px;
+    }
+
+    .header__bar__icon{
         display: none;
     }
 
-    .log__in{
+    .header__log__in{
         display: inline;
+        font-size: 18px;
+        order: 1;
+    }
+
+    .header__right__section{
+        width: 30%;
+    }
+
+    /* Left header section */
+    .header__left__section{
+        width: 50%;
+    }
+
+    .header__sub__nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        width: 60%;
+    }
+
+    /* Header - main content */
+
+    .header__main{
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        padding: 0 25px;
+        width: 90%;
+    }
+
+    .header__main__description{
+        align-items: flex-start;
+        min-height: 350px;
+        width: 55%;
+    }
+
+    .hedaer__descriptive, .header__title{
+        width: 80%;
+        text-align: left;
+    }
+
+    .header__img{
+        width: 40%;
+    }
+}
+
+/* New release section */
+
+@media screen and (min-width: 1440px) {
+    .release{
+        flex-direction: row;
+
+        margin: 0 auto;
+        width: 1350px;
+        min-height: 350px;
+    }
+
+    .release__description{
+        align-items: flex-start;
+
+        text-align: left;
+        width: 500px;
+        min-height: 250px;
+        font-size: 14px;
+    }
+
+    .release__title{
+        font-weight: bold;
+    }
+    
+    .right-icon, .left-icon{
+        display: inline;
+        width: 40px;
+    }
+
+    .release__img{
+        order: 2;
+        width: 500px;
+    }
+
+    .right-icon{
+        order: 3;
+    }
+}
+
+/* Escuelas destacadas de EDteam */
+
+@media screen and (min-width: 1440px) {
+    .carousel__div__item, .course__item{
+        display: none;
+    }
+
+    .carousel__description{
+        width: 700px;
+    }
+
+    .carousel__div{
+        width: 220px;
+    }
+
+    .carousel__list, .course__list{
+        display: flex;
+    }
+}
+
+/* Planes de estudio */
+
+@media screen and (min-width: 1440px) {
+    .plan__list{
+        min-height: 1200px;
+    }
+
+    .plan__list__container{
+        flex-direction: row;
+        min-height: 500px;
+        width: 100vw;
+    }
+
+    .plan__container{
+        width: 20vw;
+        min-height: 410px;
+    }
+
+    .user__card{
+        width: 700px;
+    }
+
+    /* Invitation message */
+    .additional__message{
+        width: 80vw;
+        min-height: 350px;
+        padding: 40px 0;
+        margin: 0 auto;
+    }
+
+    .motivational__message{
+        width: 95%;
+    }
+
+    .description__message{
+        width: 70%;
+    }
+
+    /* Footer section */
+    .footer__container{
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        min-height: 200px;
+    }
+
+    .footer__description{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 15px;
+        width: 230px;
+    }
+
+    .footer__button{
+        width: 100px;
+    }
+
+    .footer__list__container{
+        width: 1000px;
+        justify-content: space-around;
+        gap: 0;
+    }
+
+    .icon__list{
+        width: 35%;
+    }
+
+    .location__list{
+        width: 50%;
+        font-size: 15px;
+    }
+
+    .footer__social__media{
+        flex-direction: row;
+        align-items: center;
+
+        min-height: 40px;
+        width: 95vw;
     }
 }
