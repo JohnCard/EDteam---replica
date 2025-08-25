@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../style/detail.css">
+    <title>Individual course</title>
+</head>
+<body class="bg-info">
+    <!-- Menu de navegación inicial -->
+    <nav class="navbar bg-primary fixed-top navbar-expand-lg pt-3 shadow-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand text-light" href="#">
+                <img src="../img/python.webp" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                EDteam
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index_v2.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Secciones
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="courses.html">Courses list</a></li>
+                                <li><a class="dropdown-item" href="detail.html">Detailed python course</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="routes.html">Check routes</a></li>
+                                <li><a class="dropdown-item" href="register.html">Register link</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <hr class="text-dark">
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-warning" href="#">¡Sube a premium!</a>
+                        </li>
+                    </ul>
+                    <img src="../img/search.svg" alt="search-img" class="me-3 d-none d-xxl-block">
+                    <img src="../img/cart.svg" alt="cart-img" class="border-end pe-3 d-none d-xxl-block">
+                    <button type="button" class="btn btn-warning mb-3 mb-xxl-0 mx-xxl-3 fw-bold col-12 col-xxl-2">Inicia sesión</button>
+                    <button type="button" class="btn btn-warning me-xxl-2 fw-bold col-12 col-xxl-2">¡Comienza gratis!</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <br>
+    <br>
+    <br>
+
+    <div class="container nav-header text-light">
+        <!-- Nav breadcrumb-divider section -->
+        <div class="row">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#" class="text-decoration-none">Escuelas</a></li>
+                    <li class="breadcrumb-item" aria-current="page">Programación y desarrolo web</li>
+                    <li class="breadcrumb-item">Programación desde cero</li>
+                </ol>
+            </nav>
+            <h1 class="fw-bold main-title">Curso: Python desde cero 2023</h1>
+        </div>
+
+        <!-- Header main section -->
+        <div class="row">
+            <div class="col-xxl-6 order-xxl-1">
+                <img src="../img/django.webp" alt="python-img" class="col-11 col-xxl-12 rounded d-block mx-auto">
+                <div class="row ms-3 ms-xxl-1 mt-2">
+                    <ol class="breadcrumb mb-0 col-xxl-6 justify-content-xxl-between" style="--bs-breadcrumb-divider: '|';" aria-label="breadcrumb">
+                        <li class="breadcrumb-item">4.6</li>
+                        <li class="breadcrumb-item">Feb 2023</li>
+                        <li class="breadcrumb-item">6 H</li>
+                        <li class="breadcrumb-item">6.6 mil</li>
+                        <li class="breadcrumb-item">Básico</li>
+                    </ol>
+                    <p class="text-success p-0 col-xxl-6 text-xxl-end">Mira las primeras clases gratis</p>
+                </div>
+            </div>
+
+            <div class="col-xxl-6 order-xxl-0">
+                <div class="alert alert-light" role="alert">
+                    A simple light alert—check it out!
+                </div>
+                <p>¿Que aprenderás?</p>
+                <p class="fw-light">Los fundamentos de Python, empezando con variables, palabras reservadas, tipos de datos, estructuras de control y funciones.</p>
+            </div>
+        </div>
+
+        <p>Opciones para ver este curso</p>
+
+        <div class="row ms-1 ms-xxl-0">
+            <div class="col-xxl-3 p-0">
+                <button type="button" class="btn btn-warning fw-bold">Compra una suscripción premium</button>
+                <span class="span-message d-block">*Acceso a todos los cursos, rutas y escuelas de EDteam</span>
+            </div>
+            <div class="col-xxl-3 p-0">
+                <button type="button" class="btn btn-outline-primary fw-bold">Compra este curso: $500 MXN</button>
+                <span class="span-message d-block">*Acceso de por vida solo a este curso</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Acordeón -->
+    <div class="container mt-4">
+
+        <div class="row">
+
+            <div class="col-xxl-8">
+
+                <div class="row">
+                    <h3 class="col-xxl-6 fw-bold">Temario del curso</h3>
+                    <div class="col-xxl-6">
+                        <input type="text" class="form-control bg-secondary" placeholder="Buscar dentro de este curso" name="search-string">
+                    </div>
+                </div>
+
+                <div class="accordion mt-3" id="accordionExample">
+                    <div class="accordion-item bg-info">
+                        <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <strong>1. Introducción a python</strong>
+                        </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul class="list-group">
+                                <li class="list-group-item">1.1 - Bienvenida al curso de python</li>
+                                <li class="list-group-item">1.2 - ¿Qué es python y porque aprenderlo?</li>
+                                <li class="list-group-item">1.3 - Instalación de Python en Windows</li>
+                                <li class="list-group-item">1.4 - Introducción al modo interactivo de python</li>
+                                <li class="list-group-item">1.5 - Operadores matemáticos, lógicos y relacionales</li>
+                                <li class="list-group-item">1.6 - Palabras reservadas en python</li>
+                                <li class="list-group-item">1.7 - Entrada de usuario por modo interactivo</li>
+                            </ul>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item bg-info">
+                        <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <strong>2. Variables y tipos de datos</strong>
+                        </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul class="list-group">
+                                <li class="list-group-item">2.1 - Variables y constantes</li>
+                                <li class="list-group-item">2.2 - Tipos de datos básicos (Numéricos, cadenas y booleanos)</li>
+                                <li class="list-group-item">2.3 - Conversión de tipos de datos</li>
+                                <li class="list-group-item">2.4 - Listas</li>
+                                <li class="list-group-item">2.5 - Tuplas</li>
+                                <li class="list-group-item">2.6 - Diccionarios</li>
+                                <li class="list-group-item">2.7 - Sets</li>
+                                <li class="list-group-item">2.8 - None y Null</li>
+                            </ul>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item bg-info">
+                        <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <strong>3. Estructuras de control</strong>
+                        </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul class="list-group">
+                                <li class="list-group-item">3.1 - Condiciones: If y else</li>
+                                <li class="list-group-item">3.2 - Bucle while</li>
+                                <li class="list-group-item">3.3 - Bucle for</li>
+                                <li class="list-group-item">3.4 - Continue, Break y Else en bucle For</li>
+                                <li class="list-group-item">3.5 - Declaración Match (Switch)</li>
+                                <li class="list-group-item">3.6 - Manejo de errores con Try, Except y Finally</li>
+                            </ul>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item bg-info">
+                        <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <strong>4. Uso y manejo de funciones con Python</strong>
+                        </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul class="list-group">
+                                <li class="list-group-item">4.1 - ¿Qué son las funciones?</li>
+                                <li class="list-group-item">4.2 - Estructura de una Función Python</li>
+                                <li class="list-group-item">4.3 - Retornar multiples valores desde una Función Python</li>
+                                <li class="list-group-item">4.4 - Funciones y no procedimientos</li>
+                                <li class="list-group-item">4.5 - Parámetros especiales y argumentos de funciones</li>
+                                <li class="list-group-item">4.6 - Parámetros args y kargs</li>
+                            </ul>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item bg-info">
+                        <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <strong>5. Creación de un To-Do List desde el modo interactivo de Python</strong>
+                        </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul class="list-group">
+                                <li class="list-group-item">5.1 - Creación de la función principal y punto de entrada</li>
+                                <li class="list-group-item">5.2 - Menú de opciones del To Do</li>
+                                <li class="list-group-item">5.3 - Mostrando el listado de tareas</li>
+                                <li class="list-group-item">5.4 - Agregar una tarea a la lista</li>
+                                <li class="list-group-item">5.5 - Marcar una tarea como "realizada"</li>
+                                <li class="list-group-item">5.6 - Eliminar tareas de la lista</li>
+                            </ul>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="fw-bold mt-2">Acerca del curso</h3>
+                <p>Python es uno de los lenguajes más recomendados para comenzar en la programación porque es muy fácil de aprender
+                y tiene una sintaxis muy sencilla.</p>
+                <a href="#" class="text-decoration-none text-light">Ver más</a>
+
+                <h3 class="fw-bold">Cursos relacionados</h3>
+                
+                <div class="row">
+                    <div class="col-5 col-xxl-3">
+                        <img src="../img/django.webp" alt="angular" class="rounded img-fluid">
+                        <p class="fw-bold fs-14">Creación de interfaces con Django</p>
+                    </div>
+                    <div class="col-5 col-xxl-3">
+                        <img src="../img/django.webp" alt="angular" class="rounded img-fluid">
+                        <p class="fw-bold fs-14">Creación de interfaces con Django</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-xxl-4">
+    
+                <p class="mt-5 mt-xxl-0">Este curso pertenece a</p>
+                <ul class="list-group list-unstyled">
+                    <li><a href="#" class="text-decoration-none">Programación desde cero</a></li>
+                    <li><a href="#" class="text-decoration-none">Ciencia de datos e introducción a la Inteligencia Artificial</a></li>
+                    <li><a href="#" class="text-decoration-none">Backend con Python</a></li>
+                    <li><a href="#" class="text-decoration-none">Análisis de datos avanzado</a></li>
+                </ul>
+
+                <hr>
+
+                <p>Profesor de este curso</p>
+                <p>Kevin Guzmán</p>
+
+                <hr>
+
+                <p>¿Para quién es este curso</p>
+                <ul class="list-group list-unstyled">
+                    <li>Desarrolladores con experiencia que desean apredner Python</li>
+                    <li>Personas que empezarán en el mundo de la programación</li>
+                </ul>
+
+                <hr>
+
+                <p>¿Que conocimientos previos necesitas?</p>
+                <ul class="list-group list-unstyled">
+                    <li><a href="#" class="text-decoration-none">Programación desde cero</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Detalles de compra -->
+    <div class="container mt-5">
+        <h2 class="text-center fw-bold">Empieza a aprender python desde cero 2023</h2>
+        <p class="text-center">¿Aún no te decides? <a href="#" class="text-decoration-none">Mira una clase gratis</a></p>
+        <p class="text-center">Mostrar precios en</p>
+
+        <div class="row col-xxl-8 mx-xxl-auto justify-content-xxl-evenly">
+
+            <div class="course-info bg-dark-subtle rounded-4 col-11 p-0 mx-auto col-xxl-5">
+                <h3 class="fw-bold text-center mt-3">Sólo este curso</h3>
+                <h2 class="fw-bold text-center">$500</h2>
+                <button type="button" class="btn btn-outline-success mx-auto d-block mb-3 fw-bold">Success</button>
+                <div class="alert alert-secondary bg-secondary fw-light text-light" role="alert">
+                    Conserva este curso de por vida y obtén un certificado con un único pago.
+                </div>
+                <ul class="list-group list-unstyled ps-3">
+                    <li class="mb-3">Acceso de por vida a este curso</li>
+                    <li class="mb-3">Certificado de culminación</li>
+                    <li class="mb-3">Red social educativa</li>
+                    <li class="mb-3">Sin anuncios</li>
+                    <li class="mb-3">Guarda tus apuntes de clases</li>
+                    <li class="mb-3">Reproducción automática de clases</li>
+                    <li class="mb-3">Guarda el avance de tus estudios</li>
+                    <li class="mb-3">Descarga los recursos de las clases</li>
+                </ul>
+            </div>
+
+            <div class="premium-info bg-dark-subtle rounded-4 col-11 p-0 mx-auto mt-3 mt-xxl-0 col-xxl-5">
+                <h4 class="fw-bold text-center mt-3 text-warning">PREMIUM ANUAL</h4>
+                <button type="button" class="btn btn-outline-warning fw-bold bg-warning-subtle p-1 mx-auto d-block">
+                    ¡Ahorras $2,400 MXN!</button>
+                <h4 class="fw-bold text-light text-center mt-2"><span class="text-decoration-line-through text-dark h6 fw-bold me-2">$7,200</span>$4,800<span class="text-dark h6 fw-bold ms-2">MXN</span></h4>
+                <p class="text-center fs-12 text-light">Cada mes te sale a <span class="text-decoration-line-through">$600</span> 400 MXN</p>
+                
+                <div class="d-flex justify-content-center w-50 mx-auto">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">Anual</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">Semestral</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                        <label class="form-check-label" for="inlineRadio3">Mensual</label>
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn-warning fw-bold mx-auto d-block my-3">!Sube a premium ahora!</button>
+
+                <ul class="list-group list-unstyled px-4">
+                    <li class="mb-3">Obtén acceso completo a cientos de cursos, talleres y rutas con las mejores explicaciones en español.</li>
+                    <li class="mb-3">Continúa estudiando donde te quedaste (incluso si cambias de dispositivo).</li>
+                    <li class="mb-3">Revisa tus estadísticas de estudio.</li>
+                    <li class="mb-3">Recibe cursos nuevos cada semana.</li>
+                    <li class="mb-3">Usa nuestro reproductor de video premium.</li>
+                    <li class="mb-3">Maratonea con la reproducción automática de clases.</li>
+                    <li class="mb-3">Descarga recursos adicionales (pdf, slides, etc).</li>
+                    <li class="mb-3">Descarga los certificados de los cursos que termines.</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Comentarios de los usuarios del curso -->
+    <div class="container-fluid mt-5 bg-dark">
+
+        <div class="row p-xxl-5 py-4">
+
+            <div class="col-xxl-8">
+
+                <h5 class="fw-bold text-light fs-16-20">530 Calificaciones de 6.6 mill estudiantes | 4.6 </h5>
+
+                <ul class="list-group list-unstyled bg-secondary rounded-4">
+                    <li class="align-items-start d-flex my-1 p-3">
+                        <img src="../img/user.png" alt="user-icon" width="50" class="rounded-top-circle rounded-bottom-circle">
+                        <div class="bg-secondary-subtle p-2 rounded ms-4">
+                            <p>Carlos Guzmán <span>@cags 84</span></p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, et!</p>
+                        </div>
+                    </li>
+                    <li class="align-items-start d-flex my-1 p-3">
+                        <img src="../img/user.png" alt="user-icon" width="50" class="rounded-top-circle rounded-bottom-circle">
+                        <div class="bg-secondary-subtle p-2 rounded ms-4">
+                            <p>Carlos Guzmán <span>@cags 84</span></p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, et!</p>
+                        </div>
+                    </li>
+                    <li class="align-items-start d-flex my-1 p-3">
+                        <img src="../img/user.png" alt="user-icon" width="50" class="rounded-top-circle rounded-bottom-circle">
+                        <div class="bg-secondary-subtle p-2 rounded ms-4">
+                            <p>Carlos Guzmán <span>@cags 84</span></p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, et!</p>
+                        </div>
+                    </li>
+                    <li class="align-items-start d-flex my-1 p-3">
+                        <img src="../img/user.png" alt="user-icon" width="50" class="rounded-top-circle rounded-bottom-circle">
+                        <div class="bg-secondary-subtle p-2 rounded ms-4">
+                            <p>Carlos Guzmán <span>@cags 84</span></p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, et!</p>
+                        </div>
+                    </li>
+                    <li class="align-items-start d-flex my-1 p-3">
+                        <img src="../img/user.png" alt="user-icon" width="50" class="rounded-top-circle rounded-bottom-circle">
+                        <div class="bg-secondary-subtle p-2 rounded ms-4">
+                            <p>Carlos Guzmán <span>@cags 84</span></p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, et!</p>
+                        </div>
+                    </li>
+                    <li class="align-items-start d-flex my-1 p-3">
+                        <img src="../img/user.png" alt="user-icon" width="50" class="rounded-top-circle rounded-bottom-circle">
+                        <div class="bg-secondary-subtle p-2 rounded ms-4">
+                            <p>Carlos Guzmán <span>@cags 84</span></p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, et!</p>
+                        </div>
+                    </li>
+                    <li class="align-items-start d-flex my-1 p-3">
+                        <img src="../img/user.png" alt="user-icon" width="50" class="rounded-top-circle rounded-bottom-circle">
+                        <div class="bg-secondary-subtle p-2 rounded ms-4">
+                            <p>Carlos Guzmán <span>@cags 84</span></p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, et!</p>
+                        </div>
+                    </li>
+                    <a href="#" class="text-decoration-none text-center fs-4 mb-3">Ver más opiniones</a>
+                </ul>
+
+
+            </div>
+
+            <div class="col-xxl-4">
+                <h5 class="text-light fw-bold my-3 mt-xxl-0 mb-xxl-3">Recompenzamos tu esfuerzo</h5>
+                <div class="card mb-5 mb-xxl-0">
+                    <img
+                        class="card-img-top"
+                        src="../img/certificate.png"
+                        alt="Card image cap"
+                    />
+                    <div class="card-body">
+                        <p class="card-text">EDteam te ayuda a dominar la tecnología con la mejor metodología en español.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Temarios detallados</li>
+                        <li class="list-group-item">Los mejores profesores de Latinoamérica</li>
+                        <li class="list-group-item">Certificados de estudios</li>
+                        <li class="list-group-item">Toma apuntes sin salir de tus clases</li>
+                        <li class="list-group-item">Red social educativa</li>
+                        <li class="list-group-item">Cursos, talleres y rutas de aprendizaje</li>
+                    </ul>
+                </div>
+                
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Menu de navegación para el pie de página -->
+        <div class="row bg-dark px-3 py-4">
+            <div class="col-xxl-2">
+                <h5 class="fw-bold text-light">EDteam</h5>
+                <p class="text-light fw-light fs-14">Estas usando EDteam en</p>
+            </div>
+            
+            <div class="row col-xxl-10">
+                <div class="col-6 col-xxl-3 bg-dark">
+                    <h6 class="fw-bold text-light">Acerca de la empresa</h6>
+                    <ul class="list-group list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">¿Que es EDteam?</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">El equipo</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">¡Sé parte del team!</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Los profesores</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Trabaja como profesor</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Enunciado de emisión</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Marca y logotipo</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Cultura</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-xxl-3 bg-dark">
+                    <h6 class="fw-bold text-light">Conecta con EDteam</h6>
+                    <ul class="list-group list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Soporte al cliente</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Política de privacidad</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Terminos y condiciones</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Política de reembolsos</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Servicios para colegios y universidades</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 mt-3 mt-xxl-0 col-xxl-3 bg-dark">
+                    <h6 class="fw-bold text-light">Nuestros productos</h6>
+                    <ul class="list-group list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Servicios para empresas</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Canjea cupones</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Regala cursos</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Sube a premium</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 mt-3 mt-xxl-0 col-xxl-3 bg-dark">
+                    <h6 class="fw-bold text-light">Recursos gratis</h6>
+                    <ul class="list-group list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Cursos gratis</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Blog</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Conferencias</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Comunidad</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Como instalar la App de EDteam</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Firmas de correo</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-0">
+
+        <!-- Iconos finales de pie de página -->
+        <div class="row justify-content-xxl-between bg-dark px-5 py-5">
+
+            <ul class="list-group flex-row fs-12-9 justify-content-between px-3 px-xxl-0 col-xxl-5 mb-3 mb-xxl-0 text-dark-emphasis">
+                <li class="list-unstyled">Lima - Perú</li>
+                <li>Bogotá - Colombia</li>
+                <li>Cochabamba - Bolivia</li>
+            </ul>
+
+            <ul class="list-group flex-row justify-content-center justify-content-xxl-end list-unstyled gap-2 col-xxl-5 pe-0 gap-4">
+                <li><img src="../img/slack.svg" alt="slack-icon" class="rounded-bottom-circle rounded-top-circle" width="30"></li>
+                <li><img src="../img/youtube.svg" alt="youtube-icon" class="rounded-bottom-circle rounded-top-circle" width="30"></li>
+                <li><img src="../img/tiktok.svg" alt="tiktok-icon" class="rounded-bottom-circle rounded-top-circle" width="30"></li>
+                <li><img src="../img/instagram.svg" alt="instagram-icon" class="rounded-bottom-circle rounded-top-circle" width="30"></li>
+                <li><img src="../img/linkedin.svg" alt="linkedin-icon" class="rounded-bottom-circle rounded-top-circle" width="30"></li>
+                <li><img src="../img/twitter.svg" alt="twitter-icon" class="rounded-bottom-circle rounded-top-circle" width="30"></li>
+                <li><img src="../img/github.svg" alt="github-icon" class="rounded-bottom-circle rounded-top-circle" width="30"></li>
+                <li><img src="../img/whatsapp.svg" alt="whatsapp-icon" class="rounded-bottom-circle rounded-top-circle" width="30"></li>
+            </ul>
+        </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

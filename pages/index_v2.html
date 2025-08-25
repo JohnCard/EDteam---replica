@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../style/index_v2.css">
+    <title>Main V2</title>
+</head>
+<body>
+    <!-- Menu de navegación inicial -->
+    <nav class="navbar bg-primary fixed-top navbar-expand-lg pt-3 shadow-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand text-light" href="#">
+                <img src="../img/python.webp" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                EDteam
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index_v2.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Secciones
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="courses.html">Courses list</a></li>
+                                <li><a class="dropdown-item" href="detail.html">Detailed python course</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="routes.html">Check routes</a></li>
+                                <li><a class="dropdown-item" href="register.html">Register link</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <hr class="text-dark">
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-warning" href="#">¡Sube a premium!</a>
+                        </li>
+                    </ul>
+                    <img src="../img/search.svg" alt="search-img" class="me-3 d-none d-xxl-block">
+                    <img src="../img/cart.svg" alt="cart-img" class="border-end pe-3 d-none d-xxl-block">
+                    <button type="button" class="btn btn-warning mb-3 mb-xxl-0 mx-xxl-3 fw-bold col-12 col-xxl-2">Inicia sesión</button>
+                    <button type="button" class="btn btn-warning me-xxl-2 fw-bold col-12 col-xxl-2">¡Comienza gratis!</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container-fluid">
+
+        <br><br>
+
+        <!-- Encabezados -->
+        <div class="row bg-primary px-xxl-5 py-5 text-center text-xxl-start">
+            <div class="col-xxl-7">
+                <h1 class="fw-bolder text-light">Prepárate para un futuro <span class="text-warning fs-20">dominado 100% por la tecnología</span></h1>
+                <p class="text-light fs-18">Aprende Inteligencia Artificial, programación y las habilidades que necesitas para tu futuro profesional en EDteam, <span class="underline">9 años la plataforma más obsesionada</span> con la calidad de los cursos.</p>
+                <button type="button" class="btn btn-warning fw-bold d-block mx-auto mx-xxl-0" role="button">Comienza a estudiar gratis</button>
+                <span class="text-light fs-11">*No necesitas tarjeta de crédito</span>
+            </div>
+            <div class="col-xxl-5">
+                <img src="../img/Family.jpeg" alt="family-img" class="img-400-550 rounded-4">
+            </div>
+        </div>
+
+        <!-- Nuevos lanzamientos -->
+        <div class="row px-4 bg-secondary py-5">
+            <div id="carouselExampleFade-1" class="carousel slide carousel-fade carousel-dark">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="d-flex flex-column flex-xxl-row justify-content-xxl-center">
+                            <div class="order-1 order-xxl-0 text-center text-xxl-start bg-secondary mxw-600 mt-3 mt-xxl-0
+                            d-flex flex-column align-items-center align-items-xxl-start justify-content-evenly gap-3 gap-xxl-0">
+                                <button class="btn btn-warning fw-bold" role="button">Nuevo lanzamiento</button>
+                                <h2 class="fw-bold text-light">Big Data con Apache Spark</h2>
+                                <span class="text-dark-emphasis">Disponible desde el jueves 07 de agosto</span>
+                                <p class="text-light">Transforma y análisa grandes volumenes de datos con Apache Spark y Pyspark desde cero.</p>
+                                <a href="#" class="text-decoration-none fw-light">Más detalles.</a>
+                            </div>
+                            <img src="../img/user.png" alt="user-img" class="img-358-190-400-360 d-block">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex flex-column flex-xxl-row justify-content-xxl-center">
+                            <div class="order-1 order-xxl-0 text-center text-xxl-start bg-secondary mxw-600 mt-3 mt-xxl-0
+                            d-flex flex-column align-items-center align-items-xxl-start justify-content-evenly gap-3 gap-xxl-0">
+                                <button class="btn btn-warning fw-bold" role="button">Nuevo lanzamiento</button>
+                                <h2 class="fw-bold text-light">Big Data con Apache Python</h2>
+                                <span class="text-dark-emphasis">Disponible desde el jueves 07 de agosto</span>
+                                <p class="text-light">Transforma y análisa grandes volumenes de datos con Apache Spark y Pyspark desde cero.</p>
+                                <a href="#" class="text-decoration-none fw-light">Más detalles.</a>
+                            </div>
+                            <img src="../img/user.png" alt="user-img" class="img-358-190-400-360 d-block">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex flex-column flex-xxl-row justify-content-xxl-center">
+                            <div class="order-1 order-xxl-0 text-center text-xxl-start bg-secondary mxw-600 mt-3 mt-xxl-0
+                            d-flex flex-column align-items-center align-items-xxl-start justify-content-evenly gap-3 gap-xxl-0">
+                                <button class="btn btn-warning fw-bold" role="button">Nuevo lanzamiento</button>
+                                <h2 class="fw-bold text-light">Big Data con Apache React</h2>
+                                <span class="text-dark-emphasis">Disponible desde el jueves 07 de agosto</span>
+                                <p class="text-light">Transforma y análisa grandes volumenes de datos con Apache Spark y Pyspark desde cero.</p>
+                                <a href="#" class="text-decoration-none fw-light">Más detalles.</a>
+                            </div>
+                            <img src="../img/user.png" alt="user-img" class="img-358-190-400-360 d-block">
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade-1" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade-1" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="row bg-dark text-center py-5 px-3">
+
+            <!-- Escuelas destacadas de EDteam -->
+            <div class="col-xxl-6 mx-xxl-auto">
+                <h2 class="fw-bold text-light">Escuelas destacadas de EDteam</h2>
+                <p class="text-dark-emphasis">Creamos rutas de aprendizaje especialmente para guiarte en las herramientas y conocimientos más demandados en el mercado laboral.<br>
+                ¿Con cuál vas a empezar?</p>
+            </div>
+            <ul class="list-group list-unstyled flex-xxl-row justify-content-xxl-between d-xxl-flex d-none" role="list">
+                <li class="col-xxl-2 school-list-item">
+                    <div class="card">
+                        <img src="../img/django.webp" class="card-img-top" alt="django-img">
+    
+                        <div class="card-body">
+                            <h5 class="card-title">PROGRAMACIÓN Y DESARROLLO WEB</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. In tenetur doloribus quam?.</p>
+                            <a href="#" class="btn btn-primary fs fs-14 school-button">Empieza a estudiar</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-xxl-2 school-list-item">
+                    <div class="card">
+                        <img src="../img/django.webp" class="card-img-top" alt="django-img">
+    
+                        <div class="card-body">
+                            <h5 class="card-title">DESARROLLO FRONTEND</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. In tenetur doloribus quam?.</p>
+                            <a href="#" class="btn btn-primary fs fs-14 school-button">Empieza a estudiar</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-xxl-2 school-list-item">
+                    <div class="card">
+                        <img src="../img/django.webp" class="card-img-top" alt="django-img">
+    
+                        <div class="card-body">
+                            <h5 class="card-title">DESARROLLO BACKEND</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. In tenetur doloribus quam?.</p>
+                            <a href="#" class="btn btn-primary fs fs-14 school-button">Empieza a estudiar</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-xxl-2 school-list-item">
+                    <div class="card">
+                        <img src="../img/django.webp" class="card-img-top" alt="django-img">
+    
+                        <div class="card-body">
+                            <h5 class="card-title">DESARROLLO BACKEND</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. In tenetur doloribus quam?.</p>
+                            <a href="#" class="btn btn-primary fs fs-14 school-button">Empieza a estudiar</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-xxl-2 school-list-item">
+                    <div class="card">
+                        <img src="../img/django.webp" class="card-img-top" alt="django-img">
+    
+                        <div class="card-body">
+                            <h5 class="card-title">DESARROLLO BACKEND</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. In tenetur doloribus quam?.</p>
+                            <a href="#" class="btn btn-primary fs fs-14 school-button">Empieza a estudiar</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            
+            <div class="carousel slide carousel-dark carousel-fade d-xxl-none" id="mi-carousel-2" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active"  data-bs-interval="10000">
+                        <div class="carousel-caption">
+                            <p class="fw-bolder fs-5">Aprende a automatizar todos tus procesos con el framework de Django.</p>
+                        </div>
+                        <img class="img-370-635 rounded-4" src="../img/django.webp" alt="django">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="10000">
+                        <div class="carousel-caption">
+                            <p class="fw-bolder fs-5">Aprende a automatizar todos tus procesos con el framework de React.</p>
+                        </div>
+                        <img class="img-370-635 rounded-4" src="../img/django.webp" alt="react">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="10000">
+                        <div class="carousel-caption">
+                            <p class="fw-bolder fs-5">Aprende a automatizar todos tus procesos con el lenguaje python.</p>
+                        </div>
+                        <img class="img-370-635 rounded-4" src="../img/django.webp" alt="python">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="10000">
+                        <div class="carousel-caption">
+                            <p class="fw-bolder fs-5">Aprende a construir el esqueleto de tu web con HTML.</p>
+                        </div>
+                        <img class="img-370-635 rounded-4" src="../img/django.webp" alt="html">
+                    </div>
+                </div>
+    
+                <button class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#mi-carousel-2"
+                    data-bs-slide="prev"
+                >
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previus</span>
+                </button>
+    
+                <button class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#mi-carousel-2"
+                    data-bs-slide="next"
+                >
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+        
+            </div>
+
+            <!-- Explora otras escuelas de EDteam -->
+            <div class="carousel slide carousel-dark carousel-fade my-5" id="mi-carousel-3" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active"  data-bs-interval="10000">
+                        <div class="carousel-caption">
+                            <h4 class="fw-bolder d-none d-xxl-block text-light">Crea interfaces que interactuan con Django.</h4>
+                            <p class="fw-bolder fs-5 text-light">Aprende a automatizar todos tus procesos con el framework de Django.</p>
+                        </div>
+                        <img class="img-370-635 rounded-4 mx-auto d-block" src="../img/django.webp" alt="django">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="10000">
+                        <div class="carousel-caption">
+                            <h4 class="fw-bolder d-none d-xxl-block text-light">Crea interfaces que interactuan con Django.</h4>
+                            <p class="fw-bolder fs-5 text-light">Aprende a automatizar todos tus procesos con el framework de React.</p>
+                        </div>
+                        <img class="img-370-635 rounded-4 mx-auto d-block" src="../img/django.webp" alt="react">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="10000">
+                        <div class="carousel-caption">
+                            <h4 class="fw-bolder d-none d-xxl-block text-light">Crea interfaces que interactuan con Django.</h4>
+                            <p class="fw-bolder fs-5 text-light">Aprende a automatizar todos tus procesos con el lenguaje Python.</p>
+                        </div>
+                        <img class="img-370-635 rounded-4 mx-auto d-block" src="../img/django.webp" alt="python">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="10000">
+                        <div class="carousel-caption">
+                            <h4 class="fw-bolder d-none d-xxl-block text-light">Crea interfaces que interactuan con Django.</h4>
+                            <p class="fw-bolder fs-5 text-light">Aprende a construir el esqueleto de tu web con HTML.</p>
+                        </div>
+                        <img class="img-370-635 rounded-4 mx-auto d-block" src="../img/django.webp" alt="html">
+                    </div>
+                </div>
+    
+                <button class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#mi-carousel-3"
+                    data-bs-slide="prev"
+                >
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previus</span>
+                </button>
+    
+                <button class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#mi-carousel-3"
+                    data-bs-slide="next"
+                >
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+        
+            </div>
+            <button role="button" type="button" class="btn btn-primary fw-bold col-9 col-xxl-4 mx-auto">¡Explora todas nuestras escuelas!</button>
+        </div>
+
+        <!-- Planes de estudio -->
+        <div class="row bg-dark py-5">
+            <h2 class="fw-bold text-light text-center">Planes de estudio para que <span class="text-primary">#NoTeMeDetengas</span></h2>
+            <ul class="list-group list-unstyled flex-xxl-row align-items-center justify-content-xxl-around py-5">
+                <li class="my-3 my-xxl-0">
+                    <div class="card border-top-success bg-secondary" style="width: 18rem;">
+                        <img src="../img/icon-gift.svg" class="card-img-top" alt="gift-img" height="104">
+                        <div class="card-body text-center text-light">
+                            <h5 class="card-title fw-bold">Plan gratuito</h5>
+                            <p class="card-text fs-14">Toma nuestros 9 cursos gratuitos (incluyen certificado) y mira las primeras clases de todos los cursos.</p>
+                            <a href="#" class="btn btn-outline-success fw-bold">Comienza a estudiar gratis</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-3 my-xxl-0">
+                    <div class="card border-top-warning bg-secondary" style="width: 18rem;">
+                        <img src="../img/icon-trophy.svg" class="card-img-top" alt="trophy-img" height="104">
+                        <div class="card-body text-center text-light">
+                            <h5 class="card-title fw-bold">Plan Premium</h5>
+                            <p class="card-text fs-14">Acceso total a cientos de cursos, talleres y rutas de EDteam con único pago.</p>
+                            <a href="#" class="btn btn-outline-warning fw-bold">¡Sube a premium ahora!</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-3 my-xxl-0">
+                    <div class="card border-top-danger bg-secondary" style="width: 18rem;">
+                        <img src="../img/icon-briefcase.svg" class="card-img-top" alt="gift-img" height="104">
+                        <div class="card-body text-center text-light">
+                            <h5 class="card-title fw-bold">Plan para empresas</h5>
+                            <p class="card-text fs-14">Capacita a todo tu equipo desde un único lugar y supervisa sus objetivos de aprendizaje.</p>
+                            <a href="#" class="btn btn-outline-danger fw-bold">Más información</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-3 my-xxl-0">
+                    <div class="card border-top-info bg-secondary" style="width: 18rem;">
+                        <img src="../img/icon-backpack.svg" class="card-img-top" alt="gift-img" height="104">
+                        <div class="card-body text-center text-light">
+                            <h5 class="card-title fw-bold">Plan para estudiantes</h5>
+                            <p class="card-text fs-14">Si estás en la universidad, colegio o instituto, obtén una beca del 50% por un año en EDteam.</p>
+                            <a href="#" class="btn btn-outline-info fw-bold">Más información</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Tu puedes ser la próxima historia de éxito -->
+        <div class="row bg-dark py-5">
+            <h2 class="fw-bold text-light text-center">Tu puedes ser la próxima <span class="text-primary">historia de éxito</span></h2>
+            <p class="fw-light text-dark-emphasis text-center">Así como ellos tu también puedes alcanzar tus metas.</p>
+            <div id="carouselExampleFade" class="carousel slide carousel-fade">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="w-75 mx-auto d-flex flex-column flex-xxl-row rounded p-3 gap-3 border-left-top-darkcollapse bg-secondary">
+                            <img src="../img/user.png" alt="user-img" width="80" height="80" class="rounded-top-circle rounded-bottom-circle mx-auto mx-xxl-0">
+                            <div class="text-center text-xxl-start">
+                                <h4 class="fw-bold text-light">Catalina Navarrete</h4>
+                                <p class="text-dark-emphasis">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio et minima nobis cupiditate ratione saepe numquam error inventore explicabo illo laborum magnam, ullam impedit laudantium nisi provident <span class="d-xxl-block d-none">veritatis. Hic exercitationem itaque nihil eius aliquam corporis maxime voluptate excepturi voluptatibus odio qui aut reiciendis cumque iste, praesentium similique consectetur.</span></p>
+                                <a href="#" class="text-decoration-none">Leer la historia completa</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="w-75 mx-auto d-flex flex-column flex-xxl-row rounded p-3 gap-3 border-left-top-darkblue bg-secondary">
+                            <img src="../img/user.png" alt="user-img" width="80" height="80" class="rounded-top-circle rounded-bottom-circle mx-auto mx-xxl-0">
+                            <div class="text-center text-xxl-start">
+                                <h4 class="fw-bold text-light">Sánchez Navarro</h4>
+                                <p class="text-dark-emphasis">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio et minima nobis cupiditate ratione saepe numquam error inventore explicabo illo laborum magnam, ullam impedit laudantium nisi provident <span class="d-xxl-block d-none">veritatis. Hic exercitationem itaque nihil eius aliquam corporis maxime voluptate excepturi voluptatibus odio qui aut reiciendis cumque iste, praesentium similique consectetur.</span></p>
+                                <a href="#" class="text-decoration-none">Leer la historia completa</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="w-75 mx-auto d-flex flex-column flex-xxl-row rounded p-3 gap-3 border-left-top-darkblue bg-secondary">
+                            <img src="../img/user.png" alt="user-img" width="80" height="80" class="rounded-top-circle rounded-bottom-circle mx-auto mx-xxl-0">
+                            <div class="text-center text-xxl-start">
+                                <h4 class="fw-bold text-light">Queta Flores Mendez</h4>
+                                <p class="text-dark-emphasis">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio et minima nobis cupiditate ratione saepe numquam error inventore explicabo illo laborum magnam, ullam impedit laudantium nisi provident <span class="d-xxl-block d-none">veritatis. Hic exercitationem itaque nihil eius aliquam corporis maxime voluptate excepturi voluptatibus odio qui aut reiciendis cumque iste, praesentium similique consectetur.</span></p>
+                                <a href="#" class="text-decoration-none">Leer la historia completa</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- No postergues más tu educación -->
+        <div class="row bg-primary py-5">
+            <div class="col-11 text-center mx-auto col-xxl-9">
+                <h3 class="fw-bold text-light mb-3">No postergues más tu educación, ¡tu futuro te está esperando!</h3>
+                <p class="text-light text-balance mb-5">Un nuevo empleo, mejor salario, mayor calidad de vida, ¡todo lo puedes conseguir con educación! Es el momento de lograr lo que siempre has querido.</p>
+                <button class="btn btn-light fw-bold mb-1 text-primary" type="button">Comienza a estudiar gratis</button>
+                <span class="d-block text-light fw-light fs-11">*Solo necesitas un correo electrónico</span>
+            </div>
+        </div>
+
+        <!-- Menu de navegación para el pie de página -->
+        <div class="row bg-dark px-3 py-4">
+            <div class="col-xxl-2">
+                <h5 class="fw-bold text-light">EDteam</h5>
+                <p class="text-light fw-light fs-14">Estas usando EDteam en</p>
+            </div>
+            
+            <div class="row col-xxl-10">
+                <div class="col-6 col-xxl-3 bg-dark">
+                    <h6 class="fw-bold text-light">Acerca de la empresa</h6>
+                    <ul class="list-group list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">¿Que es EDteam?</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">El equipo</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">¡Sé parte del team!</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Los profesores</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Trabaja como profesor</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Enunciado de emisión</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Marca y logotipo</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Cultura</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-xxl-3 bg-dark">
+                    <h6 class="fw-bold text-light">Conecta con EDteam</h6>
+                    <ul class="list-group list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Soporte al cliente</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Política de privacidad</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Terminos y condiciones</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Política de reembolsos</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Servicios para colegios y universidades</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 mt-3 mt-xxl-0 col-xxl-3 bg-dark">
+                    <h6 class="fw-bold text-light">Nuestros productos</h6>
+                    <ul class="list-group list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Servicios para empresas</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Canjea cupones</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Regala cursos</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Sube a premium</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 mt-3 mt-xxl-0 col-xxl-3 bg-dark">
+                    <h6 class="fw-bold text-light">Recursos gratis</h6>
+                    <ul class="list-group list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Cursos gratis</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Blog</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Conferencias</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Comunidad</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Como instalar la App de EDteam</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Firmas de correo</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-0">
+
+        <!-- Iconos finales de pie de página -->
+        <div class="row justify-content-xxl-between bg-dark px-5 py-5">
+
+            <ul class="list-group flex-row fs-12-9 justify-content-between px-3 px-xxl-0 col-xxl-5 mb-3 mb-xxl-0 text-dark-emphasis">
+                <li class="list-unstyled">Lima - Perú</li>
+                <li>Bogotá - Colombia</li>
+                <li>Cochabamba - Bolivia</li>
+            </ul>
+
+            <ul class="list-group flex-row justify-content-center justify-content-xxl-end list-unstyled gap-2 col-xxl-5 pe-0 gap-4">
+                <li><img src="../img/slack.svg" alt="slack-icon" class="rounded-bottom-circle rounded-top-circle" width="30"></li>
+                <li><img src="../img/youtube.svg" alt="youtube-icon" class="rounded-bottom-circle rounded-top-circle" width="30"></li>
+                <li><img src="../img/tiktok.svg" alt="tiktok-icon" class="rounded-bottom-circle rounded-top-circle" width="30"></li>
+                <li><img src="../img/instagram.svg" alt="instagram-icon" class="rounded-bottom-circle rounded-top-circle" width="30"></li>
+                <li><img src="../img/linkedin.svg" alt="linkedin-icon" class="rounded-bottom-circle rounded-top-circle" width="30"></li>
+                <li><img src="../img/twitter.svg" alt="twitter-icon" class="rounded-bottom-circle rounded-top-circle" width="30"></li>
+                <li><img src="../img/github.svg" alt="github-icon" class="rounded-bottom-circle rounded-top-circle" width="30"></li>
+                <li><img src="../img/whatsapp.svg" alt="whatsapp-icon" class="rounded-bottom-circle rounded-top-circle" width="30"></li>
+            </ul>
+        </div>
+    </div>
+
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

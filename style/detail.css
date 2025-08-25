@@ -1,0 +1,73 @@
+/* Default settings */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+.fs-14{
+    font-size: 14px;
+}
+
+/* Header */
+
+.nav-hedaer{
+    margin-top: 70px;
+}
+
+.breadcrumb{
+    font-size: 14px;
+}
+
+.main-title{
+    font-size: 28px;
+}
+
+.alert-light{
+    border-left: 6px solid cyan;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.span-message{
+    font-size: 9px;
+}
+
+/* Detalles de la compra */
+
+.course-info{
+    border-top: 6px solid darkgreen;
+}
+
+.alert-secondary{
+    border-left: 6px solid darkgreen;
+}
+
+.premium-info{
+    border-top: 6px solid goldenrod;
+}
+
+/* Suscripción premium */
+
+.fs-12{
+    font-size: 12px;
+}
+
+/* Sección de comentarios */
+
+.fs-16-20{
+    font-size: 16px;
+}
+
+@media screen and (min-width: 1440px)  {
+    .breadcrumb{
+        font-size: 13px;
+    }
+
+    .fs-16-20{
+        font-size: 20px;
+    }
+}
+
