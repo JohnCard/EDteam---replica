@@ -25,6 +25,10 @@
         padding-bottom: #{$i}px;
     }
 
+    .pt-#{$i} {
+        padding-top: #{$i}px;
+    }
+
     .mt-#{$i} {
         margin-top: #{$i}px;
     }
