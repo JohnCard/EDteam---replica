@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../style/routes.css">
-    <link rel="stylesheet" href="../style/index_v2.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/sass__reader.css">
     <title>Routes - section</title>
 </head>
 <body>
     <!-- Menu de navegación inicial -->
-    <nav class="navbar bg-primary fixed-top navbar-expand-lg pt-3 shadow-lg">
+    <nav class="navbar bg-primary fixed-top navbar-expand-lg shadow-lg">
         <div class="container-fluid">
-            <a class="navbar-brand text-light" href="#">
+            <a class="navbar-brand text-light" href="../index.html">
                 <img src="../img/python.webp" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
                 EDteam
             </a>
@@ -27,7 +27,7 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index_v2.html">Home</a>
+                            <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -35,7 +35,7 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="courses.html">Courses list</a></li>
-                                <li><a class="dropdown-item" href="detail.html">Detailed python course</a></li>
+                                <li><a class="dropdown-item" href="detail.html">Detailed Django course</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
@@ -52,53 +52,80 @@
                     </ul>
                     <img src="../img/search.svg" alt="search-img" class="me-3 d-none d-xxl-block">
                     <img src="../img/cart.svg" alt="cart-img" class="border-end pe-3 d-none d-xxl-block">
-                    <button type="button" class="btn btn-warning mb-3 mb-xxl-0 mx-xxl-3 fw-bold col-12 col-xxl-2">Inicia sesión</button>
-                    <button type="button" class="btn btn-warning me-xxl-2 fw-bold col-12 col-xxl-2">¡Comienza gratis!</button>
+                    <button type="button" class="btn btn-warning mb-3 mb-xxl-0 mx-xxl-3 fw-bold col-12 col-xxl-2"  data-bs-toggle="modal" data-bs-target="#exampleModal">Inicia sesión</button>
+                    <a role="button" href="register.html" class="btn btn-warning me-xxl-2 fw-bold col-12 col-xxl-2">¡Comienza gratis!</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <div class="container-fluid">
-        <br><br>
-    
-        <!-- Cursos más vistos -->
-        <div class="row p-0 p-xxl-5 bg-dark">
-            <h3 class="fw-bold text-light text-center py-3">Cursos más vistos</h3>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark">
+                <div class="modal-header border-bottom-0 pb-0">
+                    <h6 class="modal-title fw-bold text-light" id="staticBackdropLabel">Inicia sesión con</h6>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body px-4">
+                    <div class="row justify-content-evenly">
+                        <button type="button" class="btn btn-light col-5 fw-bold">Google</button>
+                        <button type="button" class="btn btn-light col-5 fw-bold">Github</button>
+                    </div>
+                    <hr class="text-light">
+                    <h6 class="text-light fw-bold mb-3">O utiliza tu correo electrónico</h6>
+                    <label for="email" class="form-label text-light">Correo electrónico</label>
+                    <input type="email" name="email" id="email" class="form-control py-2 px-3 bg-secondary mb-3" placeholder="Escribe tu correo electrónico">
+                    <label for="password" class="form-label text-light">Contraseña</label>
+                    <input type="password" name="password" id="password" class="form-control py-2 px-3 bg-secondary mb-2" placeholder="Escribe tu contraseña">
+                    <a href="#" class="text-decoration-none fw-light fs-14">¿Olvidaste tu contraseña?</a>
+                    <button type="button" class="btn btn-primary col-12 fw-bold mt-4 py-2">Iniciar sesión</button>
+                </div>
+                <div class="modal-footer justify-content-center border-top-0">
+                    <p class="text-light fw-light text-center">¿No tienes una cuenta? <span class="text-primary fw-light">Regístrate gratis</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid mt-5">    
+        <!-- Rutas de estudio destacadas -->
+        <div class="row px-0 p-xxl-5 bg-dark">
+            <h3 class="fw-bold text-light text-center py-3">Rutas de estudio destacadas</h3>
             <div class="col-6 d-xxl-none">
-                <img src="../img/django.webp" alt="django-img" height="135" width="190" class="rounded">
+                <img src="../img/Desarrollo-web-básico.jpeg" alt="django-img" height="135" width="190" class="rounded">
                 <h6 class="fs-13 fw-bold mt-1 text-light">Desarrollo web básico</h6>
                 <p class="span-message text-dark-emphasis">7 cursos</p>
             </div>
             <div class="col-6 d-xxl-none">
-                <img src="../img/django.webp" alt="django-img" height="135" width="190" class="rounded">
-                <h6 class="fs-13 fw-bold mt-1 text-light">Desarrollo web básico</h6>
-                <p class="span-message text-dark-emphasis">7 cursos</p>
+                <img src="../img/Programación-desde-cero.jpeg" alt="django-img" height="135" width="190" class="rounded">
+                <h6 class="fs-13 fw-bold mt-1 text-light">Programación desde cero</h6>
+                <p class="span-message text-dark-emphasis">6 cursos</p>
             </div>
             <div class="col d-none d-xxl-block">
-                <img src="../img/django.webp" alt="django-img" height="135" width="240" class="rounded px-xxl-0">
+                <img src="../img/Desarrollo-web-básico.jpeg" alt="django-img" height="135" width="240" class="rounded px-xxl-0">
                 <h6 class="fs-15 fw-bold mt-1 text-light">Desarrollo web básico</h6>
                 <p class="span-message text-dark-emphasis">7 cursos</p>
             </div>
             <div class="col d-none d-xxl-block">
-                <img src="../img/django.webp" alt="django-img" height="135" width="240" class="rounded px-xxl-0">
-                <h6 class="fs-15 fw-bold mt-1 text-light">Desarrollo web básico</h6>
-                <p class="span-message text-dark-emphasis">7 cursos</p>
+                <img src="../img/Programación-desde-cero.jpeg" alt="django-img" height="135" width="240" class="rounded px-xxl-0">
+                <h6 class="fs-15 fw-bold mt-1 text-light">Programación desde cero</h6>
+                <p class="span-message text-dark-emphasis">6 cursos</p>
             </div>
             <div class="col d-none d-xxl-block">
-                <img src="../img/django.webp" alt="django-img" height="135" width="240" class="rounded px-xxl-0">
-                <h6 class="fs-15 fw-bold mt-1 text-light">Desarrollo web básico</h6>
-                <p class="span-message text-dark-emphasis">7 cursos</p>
+                <img src="../img/Frontend-JavaScript.jpeg" alt="django-img" height="135" width="240" class="rounded px-xxl-0">
+                <h6 class="fs-15 fw-bold mt-1 text-light">Frontend con JavaScript</h6>
+                <p class="span-message text-dark-emphasis">9 cursos</p>
             </div>
             <div class="col d-none d-xxl-block">
-                <img src="../img/django.webp" alt="django-img" height="135" width="240" class="rounded px-xxl-0">
-                <h6 class="fs-15 fw-bold mt-1 text-light">Desarrollo web básico</h6>
-                <p class="span-message text-dark-emphasis">7 cursos</p>
+                <img src="../img/Backend-fundaments.jpeg" alt="django-img" height="135" width="240" class="rounded px-xxl-0">
+                <h6 class="fs-15 fw-bold mt-1 text-light">Backend con JavaScript</h6>
+                <p class="span-message text-dark-emphasis">6 cursos</p>
             </div>
             <div class="col d-none d-xxl-block">
-                <img src="../img/django.webp" alt="django-img" height="135" width="240" class="rounded px-xxl-0">
-                <h6 class="fs-15 fw-bold mt-1 text-light">Desarrollo web básico</h6>
-                <p class="span-message text-dark-emphasis">7 cursos</p>
+                <img src="../img/Backend-JavaScript.jpeg" alt="django-img" height="135" width="240" class="rounded px-xxl-0">
+                <h6 class="fs-15 fw-bold mt-1 text-light">Fundamentos de Backend</h6>
+                <p class="span-message text-dark-emphasis">8 cursos</p>
             </div>
         </div>
     
@@ -106,12 +133,13 @@
         <div class="row bg-secondary pt-5 p-xxl-5">
             <h4 class="fw-bold text-light">Todas nuestras rutas</h4>
             <span class="span-message text-warning mb-3">Desbloquealos con una suscripción premium</span>
+
             <div class="col-12 col-sm-6 col-lg-3 mb-4 mb-xxl-4 m-auto m-xxl-0">
-                <div class="card bg-secondary">
-                    <img class="card-img-top rounded" src="../img/django.webp" alt="django-img" height="180">
+                <div class="card bg-secondary div-card">
+                    <img class="card-img-top rounded" src="../img/AWS-avanzado.jpeg" alt="django-img" height="180">
                     <div class="card-body">
-                        <h3 class="card-title fs-6 fw-bold text-light">Desarrollo web con Django</h3>
-                        <p class="card-text fs-6 text-dark-emphasis">Lorem, ipsum dolor sit amet consectetur adipisicing elit!</p>
+                        <h3 class="card-title fs-6 fw-bold text-light">AWS avanzado</h3>
+                        <p class="card-text fs-6 text-dark-emphasis">Aprende los servicios avanzados de AWS para optimizar tu infraestructura en la nube</p>
                         <p class="card-subtitle text-light fs-12"><img src="../img/box.svg" alt="box-img"> 5 cursos <img src="../img/stopwatch.svg" alt="stopwatch-img"> 36 horas</p>
                     </div>
                     <div class="card-footer ">
@@ -120,11 +148,11 @@
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-lg-3 mb-4 mb-xxl-4 m-auto m-xxl-0">
-                <div class="card bg-secondary">
-                    <img class="card-img-top rounded" src="../img/django.webp" alt="django-img" height="180">
+                <div class="card bg-secondary div-card">
+                    <img class="card-img-top rounded" src="../img/Contenedores-e-infraestructura.jpeg" alt="django-img" height="180">
                     <div class="card-body">
-                        <h3 class="card-title fs-6 fw-bold text-light">Desarrollo web con Django</h3>
-                        <p class="card-text text-dark-emphasis fs-6">Lorem, ipsum dolor sit amet consectetur adipisicing elit!</p>
+                        <h3 class="card-title fs-6 fw-bold text-light">Contenedores e infraestructura</h3>
+                        <p class="card-text text-dark-emphasis fs-6">Aprende a implementar una arquitectura de contenedores en AWS</p>
                         <p class="card-subtitle text-light fs-12"><img src="../img/box.svg" alt="box-img"> 5 cursos <img src="../img/stopwatch.svg" alt="stopwatch-img"> 36 horas</p>
                     </div>
                     <div class="card-footer ">
@@ -133,11 +161,11 @@
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-lg-3 mb-4 mb-xxl-4 m-auto m-xxl-0">
-                <div class="card bg-secondary">
-                    <img class="card-img-top rounded" src="../img/django.webp" alt="django-img" height="180">
+                <div class="card bg-secondary div-card">
+                    <img class="card-img-top rounded" src="../img/Fundamentos-de-Devops.jpeg" alt="django-img" height="180">
                     <div class="card-body">
-                        <h3 class="card-title fs-6 fw-bold text-light">Desarrollo web con Django</h3>
-                        <p class="card-text text-dark-emphasis fs-6">Lorem, ipsum dolor sit amet consectetur adipisicing elit!</p>
+                        <h3 class="card-title fs-6 fw-bold text-light">Fundamentos de DevOps</h3>
+                        <p class="card-text text-dark-emphasis fs-6">Domina la cultura de DevOps para potenciar tus procesos de desarrollo y potenciar tu eficiencia</p>
                         <p class="card-subtitle text-light fs-12"><img src="../img/box.svg" alt="box-img"> 5 cursos <img src="../img/stopwatch.svg" alt="stopwatch-img"> 36 horas</p>
                     </div>
                     <div class="card-footer ">
@@ -146,11 +174,11 @@
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-lg-3 mb-4 mb-xxl-4 m-auto m-xxl-0">
-                <div class="card bg-secondary">
-                    <img class="card-img-top rounded" src="../img/django.webp" alt="django-img" height="180">
+                <div class="card bg-secondary div-card">
+                    <img class="card-img-top rounded" src="../img/Fundamentos-AWS.jpeg" alt="django-img" height="180">
                     <div class="card-body">
-                        <h3 class="card-title fs-6 fw-bold text-light">Desarrollo web con Django</h3>
-                        <p class="card-text text-dark-emphasis fs-6">Lorem, ipsum dolor sit amet consectetur adipisicing elit!</p>
+                        <h3 class="card-title fs-6 fw-bold text-light">Fundamentos de AWS</h3>
+                        <p class="card-text text-dark-emphasis fs-6">Domina los conceptos básicos de la nube más importante del mundo y crea tu primera...</p>
                         <p class="card-subtitle text-light fs-12"><img src="../img/box.svg" alt="box-img"> 5 cursos <img src="../img/stopwatch.svg" alt="stopwatch-img"> 36 horas</p>
                     </div>
                     <div class="card-footer ">
@@ -159,11 +187,11 @@
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-lg-3 mb-4 mb-xxl-4 m-auto m-xxl-0">
-                <div class="card bg-secondary">
-                    <img class="card-img-top rounded" src="../img/django.webp" alt="django-img" height="180">
+                <div class="card bg-secondary div-card">
+                    <img class="card-img-top rounded" src="../img/Etical-Hacking.jpeg" alt="django-img" height="180">
                     <div class="card-body">
-                        <h3 class="card-title fs-6 fw-bold text-light">Desarrollo web con Django</h3>
-                        <p class="card-text text-dark-emphasis fs-6">Lorem, ipsum dolor sit amet consectetur adipisicing elit!</p>
+                        <h3 class="card-title fs-6 fw-bold text-light">Hacking ético</h3>
+                        <p class="card-text text-dark-emphasis fs-6">Conviértete en un profesional del hacking ético y protege los activos digitales de tu organización.</p>
                         <p class="card-subtitle text-light fs-12"><img src="../img/box.svg" alt="box-img"> 5 cursos <img src="../img/stopwatch.svg" alt="stopwatch-img"> 36 horas</p>
                     </div>
                     <div class="card-footer ">
@@ -172,11 +200,11 @@
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-lg-3 mb-4 mb-xxl-4 m-auto m-xxl-0">
-                <div class="card bg-secondary">
-                    <img class="card-img-top rounded" src="../img/django.webp" alt="django-img" height="180">
+                <div class="card bg-secondary div-card">
+                    <img class="card-img-top rounded" src="../img/Cibersecurity-Fundaments.jpeg" alt="django-img" height="180">
                     <div class="card-body">
-                        <h3 class="card-title fs-6 fw-bold text-light">Desarrollo web con Django</h3>
-                        <p class="card-text text-dark-emphasis fs-6">Lorem, ipsum dolor sit amet consectetur adipisicing elit!</p>
+                        <h3 class="card-title fs-6 fw-bold text-light">Fundamentos de ciberseguridad</h3>
+                        <p class="card-text text-dark-emphasis fs-6">Aprende los protocolos para asegurar la información y los sistemas, además de las...</p>
                         <p class="card-subtitle text-light fs-12"><img src="../img/box.svg" alt="box-img"> 5 cursos <img src="../img/stopwatch.svg" alt="stopwatch-img"> 36 horas</p>
                     </div>
                     <div class="card-footer ">
@@ -185,11 +213,11 @@
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-lg-3 mb-4 mb-xxl-4 m-auto m-xxl-0">
-                <div class="card bg-secondary">
-                    <img class="card-img-top rounded" src="../img/django.webp" alt="django-img" height="180">
+                <div class="card bg-secondary div-card">
+                    <img class="card-img-top rounded" src="../img/Análisis-de-datos-avanzado.jpeg" alt="django-img" height="180">
                     <div class="card-body">
-                        <h3 class="card-title fs-6 fw-bold text-light">Desarrollo web con Django</h3>
-                        <p class="card-text text-dark-emphasis fs-6">Lorem, ipsum dolor sit amet consectetur adipisicing elit!</p>
+                        <h3 class="card-title fs-6 fw-bold text-light">Análisis de datos avanzado</h3>
+                        <p class="card-text text-dark-emphasis fs-6">Domina técnicas avanzadas de análisis de datos para transformar información en insights...</p>
                         <p class="card-subtitle text-light fs-12"><img src="../img/box.svg" alt="box-img"> 5 cursos <img src="../img/stopwatch.svg" alt="stopwatch-img"> 36 horas</p>
                     </div>
                     <div class="card-footer ">
@@ -198,11 +226,11 @@
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-lg-3 mb-4 mb-xxl-4 m-auto m-xxl-0">
-                <div class="card bg-secondary">
-                    <img class="card-img-top rounded" src="../img/django.webp" alt="django-img" height="180">
+                <div class="card bg-secondary div-card">
+                    <img class="card-img-top rounded" src="../img/Fundamentos-de-análisis-de-datos.jpeg" alt="django-img" height="180">
                     <div class="card-body">
-                        <h3 class="card-title fs-6 fw-bold text-light">Desarrollo web con Django</h3>
-                        <p class="card-text text-dark-emphasis fs-6">Lorem, ipsum dolor sit amet consectetur adipisicing elit!</p>
+                        <h3 class="card-title fs-6 fw-bold text-light">Fundamentos de análisis de datos</h3>
+                        <p class="card-text text-dark-emphasis fs-6">Aprende a preparar, organizar y análizar los datos para mejorar la toma de desiciones.</p>
                         <p class="card-subtitle text-light fs-12"><img src="../img/box.svg" alt="box-img"> 5 cursos <img src="../img/stopwatch.svg" alt="stopwatch-img"> 36 horas</p>
                     </div>
                     <div class="card-footer ">
@@ -269,7 +297,7 @@
         <hr class="my-0">
 
         <!-- Iconos finales de pie de página -->
-        <div class="row justify-content-xxl-between bg-dark px-5 py-5">
+        <div class="row justify-content-xxl-between bg-dark px-5 pt-5 row-footer">
 
             <ul class="list-group flex-row fs-12-9 justify-content-between px-3 px-xxl-0 col-xxl-5 mb-3 mb-xxl-0 text-dark-emphasis">
                 <li class="list-unstyled">Lima - Perú</li>
@@ -289,47 +317,6 @@
             </ul>
         </div>
     </div>
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

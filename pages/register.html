@@ -4,66 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../style/register.css">
-    <link rel="stylesheet" href="../style/index_v2.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/sass__reader.css">
     <title>Register form</title>
 </head>
 <body>
-    <!-- Menu de navegación inicial -->
-    <nav class="navbar bg-primary fixed-top navbar-expand-lg pt-3 shadow-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand text-light" href="#">
-                <img src="../img/python.webp" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-                EDteam
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index_v2.html">Home</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Secciones
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="courses.html">Courses list</a></li>
-                                <li><a class="dropdown-item" href="detail.html">Detailed python course</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="routes.html">Check routes</a></li>
-                                <li><a class="dropdown-item" href="register.html">Register link</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <hr class="text-dark">
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-warning" href="#">¡Sube a premium!</a>
-                        </li>
-                    </ul>
-                    <img src="../img/search.svg" alt="search-img" class="me-3 d-none d-xxl-block">
-                    <img src="../img/cart.svg" alt="cart-img" class="border-end pe-3 d-none d-xxl-block">
-                    <button type="button" class="btn btn-warning mb-3 mb-xxl-0 mx-xxl-3 fw-bold col-12 col-xxl-2">Inicia sesión</button>
-                    <button type="button" class="btn btn-warning me-xxl-2 fw-bold col-12 col-xxl-2">¡Comienza gratis!</button>
-                </div>
-            </div>
-        </div>
-    </nav>
 
     <div class="container-fluid">
 
-        <br><br><br>
-
-        <div class="row">
+        <div class="row mt-5 mb-150 mb-xxl-0">
             <div class="col-11 col-xxl-6 bg-secondary rounded-4 mx-auto p-4 text-light">
                 <h1 class="text-center fw-bold mb-2"><img src="../img/youtube.svg" alt="youtube-icon" height="30"> EDteam</h1>
                 <h2 class="text-center fw-bold mb-4">Sign in</h2>
@@ -140,126 +89,7 @@
             </div>
         </div>
 
-        <br>
-
-        <!-- Menu de navegación para el pie de página -->
-        <div class="row bg-dark px-3 py-4">
-            <div class="col-xxl-2">
-                <h5 class="fw-bold text-light">EDteam</h5>
-                <p class="text-light fw-light fs-14">Estas usando EDteam en</p>
-            </div>
-            
-            <div class="row col-xxl-10">
-                <div class="col-6 col-xxl-3 bg-dark">
-                    <h6 class="fw-bold text-light">Acerca de la empresa</h6>
-                    <ul class="list-group list-unstyled">
-                        <li><a href="#" class="text-decoration-none text-dark-emphasis">¿Que es EDteam?</a></li>
-                        <li><a href="#" class="text-decoration-none text-dark-emphasis">El equipo</a></li>
-                        <li><a href="#" class="text-decoration-none text-dark-emphasis">¡Sé parte del team!</a></li>
-                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Los profesores</a></li>
-                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Trabaja como profesor</a></li>
-                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Enunciado de emisión</a></li>
-                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Marca y logotipo</a></li>
-                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Cultura</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-xxl-3 bg-dark">
-                    <h6 class="fw-bold text-light">Conecta con EDteam</h6>
-                    <ul class="list-group list-unstyled">
-                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Soporte al cliente</a></li>
-                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Política de privacidad</a></li>
-                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Terminos y condiciones</a></li>
-                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Política de reembolsos</a></li>
-                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Servicios para colegios y universidades</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 mt-3 mt-xxl-0 col-xxl-3 bg-dark">
-                    <h6 class="fw-bold text-light">Nuestros productos</h6>
-                    <ul class="list-group list-unstyled">
-                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Servicios para empresas</a></li>
-                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Canjea cupones</a></li>
-                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Regala cursos</a></li>
-                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Sube a premium</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 mt-3 mt-xxl-0 col-xxl-3 bg-dark">
-                    <h6 class="fw-bold text-light">Recursos gratis</h6>
-                    <ul class="list-group list-unstyled">
-                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Cursos gratis</a></li>
-                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Blog</a></li>
-                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Conferencias</a></li>
-                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Comunidad</a></li>
-                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Como instalar la App de EDteam</a></li>
-                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Firmas de correo</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <hr class="my-0">
-
-        <!-- Iconos finales de pie de página -->
-        <div class="row justify-content-xxl-between bg-dark px-5 py-5">
-
-            <ul class="list-group flex-row fs-12-9 justify-content-between px-3 px-xxl-0 col-xxl-5 mb-3 mb-xxl-0 text-dark-emphasis">
-                <li class="list-unstyled">Lima - Perú</li>
-                <li>Bogotá - Colombia</li>
-                <li>Cochabamba - Bolivia</li>
-            </ul>
-
-            <ul class="list-group flex-row justify-content-center justify-content-xxl-end list-unstyled gap-2 col-xxl-5 pe-0 gap-4">
-                <li><img src="../img/slack.svg" alt="slack-icon" class="rounded-bottom-circle rounded-top-circle" width="30"></li>
-                <li><img src="../img/youtube.svg" alt="youtube-icon" class="rounded-bottom-circle rounded-top-circle" width="30"></li>
-                <li><img src="../img/tiktok.svg" alt="tiktok-icon" class="rounded-bottom-circle rounded-top-circle" width="30"></li>
-                <li><img src="../img/instagram.svg" alt="instagram-icon" class="rounded-bottom-circle rounded-top-circle" width="30"></li>
-                <li><img src="../img/linkedin.svg" alt="linkedin-icon" class="rounded-bottom-circle rounded-top-circle" width="30"></li>
-                <li><img src="../img/twitter.svg" alt="twitter-icon" class="rounded-bottom-circle rounded-top-circle" width="30"></li>
-                <li><img src="../img/github.svg" alt="github-icon" class="rounded-bottom-circle rounded-top-circle" width="30"></li>
-                <li><img src="../img/whatsapp.svg" alt="whatsapp-icon" class="rounded-bottom-circle rounded-top-circle" width="30"></li>
-            </ul>
-        </div>
     </div>
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
 
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>

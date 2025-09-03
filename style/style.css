@@ -1,649 +1,79 @@
-/* 
+/* Header */
 
-Breakpoints:
-
-Complete laptop - 1440 * 900
-
-¡Phone 14 Pro Max 430 * 932
-
-*/
-
-/* Default settings */
-
-:root{
-    --main-weight: 600;
-    --twenty-px: 20px;
-    --ten-px: 10px;
-}
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    color: whitesmoke;
-}
-
-/* Additional components */
-
-.t-center{
-    text-align: center;
-}
-
-.no-margin{
-    margin: 0;
-}
-
-.bold-weight{
-    font-weight: bold;
-}
-
-.no-decoration{
-    text-decoration: none;
-}
-
-.max-vw{
-    width: 95vw;
-}
-
-.padding-container{
-    padding: 80px 10px;
-}
-
-.none-list-style{
-    list-style: none;
-}
-
-.img{
-    width: 90%;
-    padding: 40px;
-    border-radius: 60px;
-}
-
-.gold__button{
-    padding: 3px;
-    width: 50%;
-    color: black;
-    border-radius: var(--ten-px);
-    background-color: #FFE01C;
-}
-
-.fill__icon{
-    width: 30px;
-}
-
-/* Header navigatior */
-
-.header__nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
-    background-color: #0C4DC2;
-    width: 100vw;
-    gap: 20px;
-    padding: 20px 15px;
-    position: sticky;
-    top: 0;
-    box-shadow: 0 0 40px 20px black;
-    z-index: 1;
-}
-
-/* Header left section */
-
-.header__left__section{
-    display: flex;
-    width: 40%;
-}
-
-.header__sub__nav{
-    display: none;
-}
-
-/* Header right section */
-
-.header__right__section{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 50%;
-}
-
-.header__button{
-    padding: 2px 10px;
-    font-size: 10px;
-    border-radius: 8px;
-    color: black;
-}
-
-.header__log__in{
-    display: none;
-}
-
-/* Header (main section) */
-
-.header{
-    min-height: 85vh;
-    background-image: linear-gradient(rgb(3, 52, 110), rgb(2, 21, 38), rgb(3, 52, 110));
-}
-
-.header__main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    position: relative;
-    top: 40px;
-    z-index: 0;
-}
-
-.header__main__description{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-
-    min-height: 45vh;
-}
-
-.header__title, .hedaer__descriptive{
-    text-align: center;
-}
-
-.header__title{
-    font-size: 36px;
-}
-
-.hedaer__descriptive{
-    width: 90%;
-}
-
-.header__img{
-    width: 90%;
-    border-radius: 60px;
-    padding: 25px;
-}
-
-/* New release section */
-
-.release__div{
-    background-color: #536078;
-}
-
-.release{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-
-    min-height: 600px;
-}
-
-.release__description{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-
-    text-align: center;
-    min-height: 300px;
-    padding: 0 20px;
-}
-
-.right-icon, .left-icon{
-    display: none;
-}
-
-/* Escuelas destacadas de EDteam */
-
-.carousel__section{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-
-    min-height: 920px;
-    text-align: center;
-    background-color: #283752;
-}
-
-.carousel__div, .carousel__description{
+.img-400-550{
     width: 400px;
+    height: 350px;
 }
 
-.carousel__div{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 350px;
-}
+/* Slideshow */
 
-.carousel-img{
-    width: 40%;
-}
-
-.carousel__list{
-    display: none;
-    flex-direction: row;
-    justify-content: space-evenly;
-
-    padding: 0;
-    margin: 0;
-    width: 100vw;
-}
-
-/* Explora otras escuelas de EDteam */
-
-.course__container{
-    display: flex;
-
+.img-370-635{
     width: 370px;
-    padding: 20px;
-    text-align: left;
-    background-color: #536078;
-    border-bottom: gray solid 6px;
-    border-radius: 15px;
 }
 
-.course__description__section{
-    width: 70%;
+.img-358-190-400-360{
+    width: 358px;
+    height: 190px;
 }
 
-.course__description{
-    font-size: 12px;
+.mxw-600{
+    max-width: 600px;
 }
 
-.course__log__section{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+/* Escuelas destacadas de EDteam  */
 
-    width: 30%;
-}
-
-.course__img{
-    width: 70px;
-}
-
-.course__list{
+.school-button{
     display: none;
-    justify-content: space-around;
-    align-items: center;
-
-    padding: 0;
-    margin: 0;
-    width: 95vw;
 }
 
-/* Plan list */
-
-.plan__list{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    min-height: 250vh;
-    background-image: linear-gradient(to bottom right, #333131, #383636, #2B2828, #302E2E);
-    padding: 30px 10px;
+.school-list-item:hover{
+    .school-button{
+        display: block;
+    }
 }
 
-.plan__list__container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
+/* Tu puedes ser la próxima historia de éxito */
 
-    min-height: 170vh;
-    padding: 0;
+.border-left-top-darkblue{
+    border-top: 6px solid darkblue;
 }
 
-.plan__container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* No postergues más tu educación */
 
-    width: 70%;
-    padding: 30px 15px;
-    background-color: #536078;
-    border-radius: 15px;
+.text-balance{
+    text-wrap: balance;
 }
 
-.img-plan{
-    width: 40%;
+/* Pie de la página */
+
+.fs-12-9{
+    font-size: 9px;
 }
-
-.plan__description{
-    font-size: 15px;
-}
-
-.free{
-    border-top: darkgreen solid 6px;
-}
-
-.primary{
-    border-top: darkblue solid 6px;
-}
-
-.warning{
-    border-top: darkgoldenrod solid 6px;
-}
-
-.danger{
-    border-top: darkred solid 6px;
-}
-
-/* Additional section */
-
-.span-message{
-    width: 370px;
-    font-size: 14px;
-}
-
-.user__card{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    min-height: 372px;
-    width: 365px;
-    background-color: #536078;
-    padding: 25px;
-    border-radius: 15px;
-}
-
-.user__photo{
-    border-radius: 50%;
-    width: 15%;
-}
-
-/* Additional message */
-
-.motivation__message{
-    background-color: #0C4DC2;
-}
-
-.additional__message{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-
-    padding: 30px 20px;
-    min-height: 40vh;
-}
-
-/* Footer */
-
-.footer{
-    display: flex;
-    flex-direction: column;
-
-    padding: 60px 20px;
-    background-color: #283752;
-    font-size: 14px;
-}
-
-.footer__list, .footer__list__container, .location__list, .icon__list{
-    padding: 0;
-}
-
-.footer__list, .footer__list__container, .location__list, .icon__list, .footer__sub__title{
-    margin: 0;
-}
-
-.location__list{
-    font-size: 10px;
-}
-
-.location__list, .icon__list{
-    display: flex;
-    justify-content: space-around;
-
-    width: 95vw;
-}
-
-.footer__container{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    min-height: 450px;
-}
-
-.footer__list__container{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.footer__sub__title{
-    font-size: 14px;
-}
-
-.footer__list{
-    width: 190px;
-}
-
-.footer__social__media{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    min-height: 55px;
-}
-
-/* Media queries*/
 
 @media screen and (min-width: 1440px) {
-
-    .header{
-        justify-content: space-evenly;
-        min-height: 480px;
+    .img-400-550{
+        width: 550px;
     }
 
-    /* Right header section */
-    .header-right-nav-item-1{
-        order: 3;
+    .img-400-635{
+        width: 635px;
     }
 
-    .header__button{
-        font-size: 16px;
+    .img-358-190-400-360{
+        width: 400px;
+        height: 280px;
     }
 
-    .header__bar__icon{
-        display: none;
+    /* No postergues más tu educación */
+
+    .border-left-top-darkblue{
+        border-left: 6px solid darkblue;
+        border-top: 0;
     }
 
-    .header__log__in{
-        display: inline;
-        font-size: 18px;
-        order: 1;
-    }
+    /* Pie de la página */
 
-    .header__right__section{
-        width: 30%;
-    }
-
-    /* Left header section */
-    .header__left__section{
-        width: 70%;
-    }
-
-    .header__sub__nav{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        
-        width: 60%;
-    }
-
-    /* Header - main content */
-
-    .header__main{
-        flex-direction: row;
-        justify-content: space-evenly;
-
-        padding: 0 25px;
-        width: 90%;
-    }
-
-    .header__main__description{
-        align-items: flex-start;
-        min-height: 350px;
-        width: 55%;
-    }
-
-    .hedaer__descriptive, .header__title{
-        width: 80%;
-        text-align: left;
-    }
-
-    .header__img{
-        width: 40%;
-    }
-}
-
-/* New release section */
-
-@media screen and (min-width: 1440px) {
-    .release{
-        flex-direction: row;
-
-        margin: 0 auto;
-        width: 1350px;
-        min-height: 350px;
-    }
-
-    .release__description{
-        align-items: flex-start;
-
-        text-align: left;
-        width: 500px;
-        min-height: 250px;
-        font-size: 14px;
-    }
-
-    .release__title{
-        font-weight: bold;
-    }
-    
-    .right-icon, .left-icon{
-        display: inline;
-        width: 40px;
-    }
-
-    .release__img{
-        order: 2;
-        width: 500px;
-    }
-
-    .right-icon{
-        order: 3;
-    }
-}
-
-/* Escuelas destacadas de EDteam */
-
-@media screen and (min-width: 1440px) {
-    .carousel__div__item, .course__item{
-        display: none;
-    }
-
-    .carousel__description{
-        width: 700px;
-    }
-
-    .carousel__div{
-        width: 220px;
-    }
-
-    .carousel__list, .course__list{
-        display: flex;
-    }
-}
-
-/* Planes de estudio */
-
-@media screen and (min-width: 1440px) {
-    .plan__list{
-        min-height: 1200px;
-    }
-
-    .plan__list__container{
-        flex-direction: row;
-        min-height: 500px;
-        width: 100vw;
-    }
-
-    .plan__container{
-        width: 20vw;
-        min-height: 410px;
-    }
-
-    .user__card{
-        width: 700px;
-    }
-
-    /* Invitation message */
-    .additional__message{
-        width: 80vw;
-        min-height: 350px;
-        padding: 40px 0;
-        margin: 0 auto;
-    }
-
-    .motivational__message{
-        width: 95%;
-    }
-
-    .description__message{
-        width: 70%;
-    }
-
-    /* Footer section */
-    .footer__container{
-        flex-direction: row;
-        justify-content: space-evenly;
-
-        min-height: 200px;
-    }
-
-    .footer__description{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-
-        gap: 15px;
-        width: 230px;
-    }
-
-    .footer__button{
-        width: 100px;
-    }
-
-    .footer__list__container{
-        width: 1000px;
-        justify-content: space-around;
-        gap: 0;
-    }
-
-    .icon__list{
-        width: 35%;
-    }
-
-    .location__list{
-        width: 50%;
-        font-size: 15px;
-    }
-
-    .footer__social__media{
-        flex-direction: row;
-        align-items: center;
-
-        min-height: 40px;
-        width: 95vw;
+    .fs-12-9{
+        font-size: 12px;
     }
 }

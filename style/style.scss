@@ -1,0 +1,143 @@
+// Generic Default styles / settings
+
+// Reload css generic styles
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+// font sizes (from 7px to 75px) (esto la hacemos omitiendo los fs-1 hasta fs-6 debido a los
+// tamaños fuente que ofrece bootstrap por defecto)
+
+@for $i from 7 through 75{
+    .fs-#{$i} {
+        font-size: #{$i}px;
+    }
+}
+
+// Seguimos la siguiente regla para aplicar unos cuantos paddings y margins a nuestro gusto
+@for $i from 6 through 150{
+    .pb-#{$i} {
+        padding-bottom: #{$i}px;
+    }
+
+    .mt-#{$i} {
+        margin-top: #{$i}px;
+    }
+
+    .mb-#{$i} {
+        margin-bottom: #{$i}px;
+    }
+}
+
+// Initial functions
+
+@mixin alert($color){
+    border-left: 6px solid $color;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+@mixin border-top($color){
+    border-top: 6px solid $color;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+// Main index (section) ################################################################################################
+
+// Planes de estudio ----------------------------------------------------------------------------------------------------------------------
+
+.border-top-success{
+    @include border-top(darkgreen)
+}
+
+.border-top-warning{
+    @include border-top(goldenrod)
+}
+
+.border-top-danger{
+    @include border-top(darkred)
+}
+
+.border-top-info{
+    @include border-top(darkblue)
+}
+
+// Footer ----------------------------------------------------------------------------------------------------------------------
+
+.row-footer{
+    padding-bottom: 150px;
+}
+
+@media screen and (min-width: 1440px) {
+    .row-footer{
+        padding-bottom: 40px;
+    }
+}
+
+// Detailed Python course (section) ################################################################################################
+
+// Header ----------------------------------------------------------------------------------------------------------------------
+
+.alert-light{
+    @include alert(cyan)
+}
+
+// Detalles de la compra -------------------------------------------------------------------------------------------------------
+
+.alert-secondary{
+    @include alert(darkgreen)
+}
+
+// Sección de comentarios -------------------------------------------------------------------------------------------------------
+.fs-16-20{
+    font-size: 16px;
+}
+
+@media screen and (min-width: 1440px)  {
+    .fs-16-20{
+        font-size: 20px;
+    }
+}
+
+// Additional styles #########################################################################################
+// ##########################################################################################################
+// ##########################################################################################################
+
+// Courses list (section) ##############################################################################################
+
+// Slideshow -------------------------------------------------------------------------------------------------
+
+.img-w358-h190{
+    width: 358px;
+    height: 190px;
+}
+
+.mxw-600{
+    max-width: 600px;
+}
+
+// Cursos más vistos -------------------------------------------------------------------------------------------------
+
+.div-card{
+    // transform: scale(1.1);
+    transition: transform 0.7s ease;
+}
+
+.div-card:hover{
+    transform: scale(1.05);
+}
+
+// Register (seection) ##############################################################################################
+
+// Header -------------------------------------------------------------------------------------------------
+
+.container{
+    margin-top: 150px;
+}
+

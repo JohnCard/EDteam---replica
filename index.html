@@ -3,376 +3,472 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EDteam Copy</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="style/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/sass__reader.css">
+    <title>Main V2</title>
 </head>
 <body>
-    <!-- Este proyecto esta enfocado a realizar una replica para la pagina EDteam (https://ed.team/) -->
 
-    <!-- Header section -->
+    <!-- Menu de navegación inicial -->
+    <nav class="navbar bg-primary fixed-top navbar-expand-lg shadow-lg">
+        
+        <div class="container-fluid">
 
-    <div class="header__nav">
-        <ul class="header__left__section no-margin p-0">
-            <h3 class="bold-weight m-0"><img src="img/circle-fill.svg" alt="circle" class="fill__icon"> EDteam</h3>
+            <a class="navbar-brand text-light" href="index.html">
+                <img src="../img/python.webp" alt="Logo" width="30" height="24" class="d-inline-block align-text-top"> EDteam
+            </a>
 
-            <ul class="header__sub__nav none-list-style">
-                <li class="header__sub__nav__item"><a href="pages/index_v2.html" class="no-decoration">Home V2</a></li>
-                <li class="header__sub__nav__item"><a href="pages/courses.html" class="no-decoration">Courses list</a></li>
-                <li class="header__sub__nav__item"><a href="pages/detail.html" class="no-decoration">Detailed python course</a></li>
-                <li class="header__sub__nav__item"><a href="pages/register.html" class="no-decoration">Register form</a></li>
-                <li class="header__sub__nav__item"><a href="pages/routes.html" class="no-decoration">Route list</a></li>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Secciones
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="pages/courses.html">Courses list</a></li>
+                                <li><a class="dropdown-item" href="pages/detail.html">Detailed Django course</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="pages/routes.html">Check routes</a></li>
+                                <li><a class="dropdown-item" href="pages/register.html">Register link</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <hr class="text-dark">
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-warning" href="#">¡Sube a premium!</a>
+                        </li>
+                    </ul>
+                    <img src="../img/search.svg" alt="search-img" class="me-3 d-none d-xxl-block">
+                    <img src="../img/cart.svg" alt="cart-img" class="border-end pe-3 d-none d-xxl-block">
+                    <button type="button" class="btn btn-warning mb-3 mb-xxl-0 mx-xxl-3 fw-bold col-12 col-xxl-2"  data-bs-toggle="modal" data-bs-target="#exampleModal">Inicia sesión</button>
+                    <a role="button" href="pages/register.html" class="btn btn-warning me-xxl-2 fw-bold col-12 col-xxl-2">¡Comienza gratis!</a>
+                </div>
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark">
+                <div class="modal-header border-bottom-0 pb-0">
+                    <h6 class="modal-title fw-bold text-light" id="staticBackdropLabel">Inicia sesión con</h6>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body px-4">
+                    <div class="row justify-content-evenly">
+                        <button type="button" class="btn btn-light col-5 fw-bold">Google</button>
+                        <button type="button" class="btn btn-light col-5 fw-bold">Github</button>
+                    </div>
+                    <hr class="text-light">
+                    <h6 class="text-light fw-bold mb-3">O utiliza tu correo electrónico</h6>
+                    <label for="email" class="form-label text-light">Correo electrónico</label>
+                    <input type="email" name="email" id="email" class="form-control py-2 px-3 bg-secondary mb-3" placeholder="Escribe tu correo electrónico">
+                    <label for="password" class="form-label text-light">Contraseña</label>
+                    <input type="password" name="password" id="password" class="form-control py-2 px-3 bg-secondary mb-2" placeholder="Escribe tu contraseña">
+                    <a href="#" class="text-decoration-none fw-light fs-14">¿Olvidaste tu contraseña?</a>
+                    <button type="button" class="btn btn-primary col-12 fw-bold mt-4 py-2">Iniciar sesión</button>
+                </div>
+                <div class="modal-footer justify-content-center border-top-0">
+                    <p class="text-light fw-light text-center">¿No tienes una cuenta? <span class="text-primary fw-light">Regístrate gratis</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container-fluid">
+
+        <br><br>
+
+        <!-- Encabezados -->
+        <div class="row bg-primary px-xxl-5 py-5 text-center text-xxl-start">
+            <div class="col-xxl-7">
+                <h1 class="fw-bolder text-light">Prepárate para un futuro <span class="text-warning fs-55">dominado 100% por la tecnología</span></h1>
+                <p class="text-light fs-18">Aprende Inteligencia Artificial, programación y las habilidades que necesitas para tu futuro profesional en EDteam, <span class="text-decoration-underline">9 años la plataforma más obsesionada</span> con la calidad de los cursos.</p>
+                <button type="button" class="btn btn-warning fw-bold d-block mx-auto mx-xxl-0" role="button">Comienza a estudiar gratis</button>
+                <span class="text-light fs-11">*No necesitas tarjeta de crédito</span>
+            </div>
+            <div class="col-xxl-5">
+                <img src="img/family.jpg" alt="family-img" class="img-400-550 rounded-4">
+            </div>
+        </div>
+
+        <!-- Nuevos lanzamientos -->
+        <div class="row px-4 bg-secondary py-5">
+            <div id="carouselExampleFade-1" class="carousel slide carousel-dark">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="d-flex flex-column flex-xxl-row justify-content-xxl-center">
+                            <div class="order-1 order-xxl-0 text-center text-xxl-start bg-secondary mxw-600 mt-3 mt-xxl-0
+                            d-flex flex-column align-items-center align-items-xxl-start justify-content-evenly gap-3 gap-xxl-0">
+                                <button class="btn btn-warning fw-bold mb-2" role="button">Nuevo lanzamiento</button>
+                                <h2 class="fw-bold text-light ">HTML</h2>
+                                <span class="text-dark-emphasis">Disponible desde el jueves 07 de agosto</span>
+                                <p class="text-light">Aprende las bases de HTML para poder introducirte en el mundo del desarrollo web y aprender a guiarte por una semántica correcta para tus sitios web.</p>
+                                <a href="#" class="text-decoration-none fw-light">Más detalles.</a>
+                            </div>
+                            <img src="img/html.png" alt="user-img" class="img-358-190-400-360 d-block">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex flex-column flex-xxl-row justify-content-xxl-center">
+                            <div class="order-1 order-xxl-0 text-center text-xxl-start bg-secondary mxw-600 mt-3 mt-xxl-0
+                            d-flex flex-column align-items-center align-items-xxl-start justify-content-evenly gap-3 gap-xxl-0">
+                                <button class="btn btn-warning fw-bold mb-2" role="button">Nuevo lanzamiento</button>
+                                <h2 class="fw-bold text-light">CSS</h2>
+                                <span class="text-dark-emphasis">Disponible desde el viernes 08 de agosto</span>
+                                <p class="text-light">Aprende las bases del lenguaje que te permite darle un diseño correcto a tus sitios web y dar una mejor experiencia de usuario.</p>
+                                <a href="#" class="text-decoration-none fw-light">Más detalles.</a>
+                            </div>
+                            <img src="img/css.png" alt="user-img" class="img-358-190-400-360 d-block">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex flex-column flex-xxl-row justify-content-xxl-center">
+                            <div class="order-1 order-xxl-0 text-center text-xxl-start bg-secondary mxw-600 mt-3 mt-xxl-0
+                            d-flex flex-column align-items-center align-items-xxl-start justify-content-evenly gap-3 gap-xxl-0">
+                                <button class="btn btn-warning fw-bold mb-2" role="button">Nuevo lanzamiento</button>
+                                <h2 class="fw-bold text-light">JavaScript desde cero</h2>
+                                <span class="text-dark-emphasis">Disponible desde el miércoles 06 de agosto</span>
+                                <p class="text-light">Aprender a utilizar JavaScript, el lenguaje universal para poder dar interactividad a tus sitios web y hacer que tus proyectos cobren vida.</p>
+                                <a href="#" class="text-decoration-none fw-light">Más detalles.</a>
+                            </div>
+                            <img src="img/javascript.png" alt="user-img" class="img-358-190-400-360 d-block">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex flex-column flex-xxl-row justify-content-xxl-center">
+                            <div class="order-1 order-xxl-0 text-center text-xxl-start bg-secondary mxw-600 mt-3 mt-xxl-0
+                            d-flex flex-column align-items-center align-items-xxl-start justify-content-evenly gap-3 gap-xxl-0">
+                                <button class="btn btn-warning fw-bold mb-2" role="button">Nuevo lanzamiento</button>
+                                <h2 class="fw-bold text-light">Python desde cero 2025</h2>
+                                <span class="text-dark-emphasis">Disponible desde el martes 05 de agosto</span>
+                                <p class="text-light">Introducete en el mundo de Python, un lenguaje sumamente sencillo de aprender y que te abrira las puertas automaticamente a un sin fin de posibilidades de aprendizaje ya sea para especializarte en desarrolo web, hacking ético, análisis de datos y mucho más.</p>
+                                <a href="#" class="text-decoration-none fw-light">Más detalles.</a>
+                            </div>
+                            <img src="img/python.webp" alt="user-img" class="img-358-190-400-360 d-block">
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade-1" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade-1" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="row bg-dark py-5 px-3">
+
+            <!-- Escuelas destacadas de EDteam -->
+            <div class="col-xxl-6 mx-xxl-auto">
+                <h2 class="text-center fw-bold text-light">Escuelas destacadas de EDteam</h2>
+                <p class="text-center text-dark-emphasis mb-5">Creamos rutas de aprendizaje especialmente para guiarte en las herramientas y conocimientos más demandados en el mercado laboral.<br>
+                ¿Con cuál vas a empezar?</p>
+            </div>
+
+            <ul class="list-group list-unstyled flex-xxl-row justify-content-xxl-between d-xxl-flex d-none" role="list">
+                <li class="col-xxl-2 school-list-item">
+                    <div class="card">
+                        <img src="img/Frontend-Angular.jpeg" class="card-img-top" alt="django-img" height="170">
+    
+                        <div class="card-body">
+                            <h5 class="card-title">FRONTEND CON ANGULAR</h5>
+                            <p class="card-text">Lleva JavaScript al siguiente nivel y aprende a utilizar la última versión de angular.</p>
+                            <a href="#" class="btn btn-primary fs fs-14 school-button">Empieza a estudiar</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-xxl-2 school-list-item">
+                    <div class="card">
+                        <img src="img/Frontend-Vue.jpeg" class="card-img-top" alt="django-img" height="170">
+    
+                        <div class="card-body">
+                            <h5 class="card-title">DESARROLLO CON VUE</h5>
+                            <p class="card-text">Domina el framework progresivo preferido por los programadores frontend.</p>
+                            <a href="#" class="btn btn-primary fs fs-14 school-button">Empieza a estudiar</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-xxl-2 school-list-item">
+                    <div class="card">
+                        <img src="img/Frontend-JavaScript.jpeg" class="card-img-top" alt="django-img" height="170">
+    
+                        <div class="card-body">
+                            <h5 class="card-title">FRONTEND CON JAVASCRIPT</h5>
+                            <p class="card-text">Conviértete en desarrollador con frontend aprendiendo JavaScript, la clave para la creación...</p>
+                            <a href="#" class="btn btn-primary fs fs-14 school-button">Empieza a estudiar</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-xxl-2 school-list-item">
+                    <div class="card">
+                        <img src="img/Frontend-React.jpeg" class="card-img-top" alt="django-img" height="170">
+    
+                        <div class="card-body">
+                            <h5 class="card-title">FRONTEND CON REACT</h5>
+                            <p class="card-text">Domina una de las librerías más usadas de JavaScript y crea tu primera aplicación real...</p>
+                            <a href="#" class="btn btn-primary fs fs-14 school-button">Empieza a estudiar</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-xxl-2 school-list-item">
+                    <div class="card">
+                        <img src="img/Backend-fundaments.jpeg" class="card-img-top" alt="django-img" height="170">
+    
+                        <div class="card-body">
+                            <h5 class="card-title">DESARROLLO BACKEND</h5>
+                            <p class="card-text">Introducete en el mundo de los metadatos y aprende a interactuar correctamente con...</p>
+                            <a href="#" class="btn btn-primary fs fs-14 school-button">Empieza a estudiar</a>
+                        </div>
+                    </div>
+                </li>
             </ul>
-        </ul>
 
-        <ul class="header__right__section no-margin none-list-style">
-            <li class="header-right-nav-item-1"><button class="header__button">Log in free</button></li>
+            <div class="carousel slide carousel-dark d-xxl-none" id="mi-carousel-2" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active"  data-bs-interval="10000">
+                        <img class="img-370-635 rounded-4" src="img/Análisis-de-datos-avanzado.jpeg" alt="django" height="200">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="10000">
+                        <img class="img-370-635 rounded-4" src="img/Backend-fundaments.jpeg" alt="react" height="200">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="10000">
+                        <img class="img-370-635 rounded-4" src="img/Frontend-React.jpeg" alt="python" height="200">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="10000">
+                        <img class="img-370-635 rounded-4" src="img/Fundamentos-de-análisis-de-datos.jpeg" alt="html" height="200">
+                    </div>
+                </div>
+    
+                <button class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#mi-carousel-2"
+                    data-bs-slide="prev"
+                >
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previus</span>
+                </button>
+    
+                <button class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#mi-carousel-2"
+                    data-bs-slide="next"
+                >
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+        
+            </div>
 
-            <li><img src="img/search.svg" alt="search-icon"></li>
+            <button role="button" type="button" class="btn btn-primary fw-bold col-10 col-xxl-4 mx-auto fs-15 mt-5">¡Explora todas nuestras escuelas!</button>
+        </div>
+
+        <!-- Planes de estudio -->
+        <div class="row bg-dark py-5">
+            <h2 class="fw-bold text-light text-center">Planes de estudio para que <span class="text-primary">#NoTeMeDetengas</span></h2>
+            <ul class="list-group list-unstyled flex-xxl-row align-items-center justify-content-xxl-around py-5">
+                <li class="my-3 my-xxl-0">
+                    <div class="card border-top-success bg-secondary" style="width: 18rem;">
+                        <img src="../img/icon-gift.svg" class="card-img-top" alt="gift-img" height="104">
+                        <div class="card-body text-center text-light">
+                            <h5 class="card-title fw-bold">Plan gratuito</h5>
+                            <p class="card-text fs-14">Toma nuestros 9 cursos gratuitos (incluyen certificado) y mira las primeras clases de todos los cursos.</p>
+                            <a href="#" class="btn btn-outline-success fw-bold">Comienza a estudiar gratis</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-3 my-xxl-0">
+                    <div class="card border-top-warning bg-secondary" style="width: 18rem;">
+                        <img src="../img/icon-trophy.svg" class="card-img-top" alt="trophy-img" height="104">
+                        <div class="card-body text-center text-light">
+                            <h5 class="card-title fw-bold">Plan Premium</h5>
+                            <p class="card-text fs-14">Acceso total a cientos de cursos, talleres y rutas de EDteam con único pago.</p>
+                            <a href="#" class="btn btn-outline-warning fw-bold">¡Sube a premium ahora!</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-3 my-xxl-0">
+                    <div class="card border-top-danger bg-secondary" style="width: 18rem;">
+                        <img src="../img/icon-briefcase.svg" class="card-img-top" alt="gift-img" height="104">
+                        <div class="card-body text-center text-light">
+                            <h5 class="card-title fw-bold">Plan para empresas</h5>
+                            <p class="card-text fs-14">Capacita a todo tu equipo desde un único lugar y supervisa sus objetivos de aprendizaje.</p>
+                            <a href="#" class="btn btn-outline-danger fw-bold">Más información</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="my-3 my-xxl-0">
+                    <div class="card border-top-info bg-secondary" style="width: 18rem;">
+                        <img src="../img/icon-backpack.svg" class="card-img-top" alt="gift-img" height="104">
+                        <div class="card-body text-center text-light">
+                            <h5 class="card-title fw-bold">Plan para estudiantes</h5>
+                            <p class="card-text fs-14">Si estás en la universidad, colegio o instituto, obtén una beca del 50% por un año en EDteam.</p>
+                            <a href="#" class="btn btn-outline-info fw-bold">Más información</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Tu puedes ser la próxima historia de éxito -->
+        <div class="row bg-dark py-5">
+            <h2 class="fw-bold text-light text-center">Tu puedes ser la próxima <span class="text-primary">historia de éxito</span></h2>
+            <p class="fw-light text-dark-emphasis text-center">Así como ellos tu también puedes alcanzar tus metas.</p>
+
+            <div id="carouselExampleFade" class="carousel slide carousel-fade">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="w-75 mx-auto d-flex flex-column flex-xxl-row rounded p-3 gap-3 border-left-top-darkblue collapse bg-secondary">
+                            <img src="img/user.png" alt="user-img" width="80" height="80" class="rounded-top-circle rounded-bottom-circle mx-auto mx-xxl-0">
+                            <div class="text-center text-xxl-start">
+                                <h4 class="fw-bold text-light py-2">Catalina Navarrete</h4>
+                                <p class="text-dark-emphasis py-2">Voy a la mitad de la carrera de "Ingeniería en Informática" en México. En todos esos años jamas aprendí todo lo que se aprendió en este curso. Si fue muy teórico pero realmente es algo que se necesita saber, es la base para cualquier programador.</p>
+                                <a href="#" class="text-decoration-none py-2">Leer la historia completa</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="w-75 mx-auto d-flex flex-column flex-xxl-row rounded p-3 gap-3 border-left-top-darkblue bg-secondary">
+                            <img src="img/user-2.png" alt="user-img" width="80" height="80" class="rounded-top-circle rounded-bottom-circle mx-auto mx-xxl-0">
+                            <div class="text-center text-xxl-start">
+                                <h4 class="fw-bold text-light py-2">Jesus Espinoza</h4>
+                                <p class="text-dark-emphasis py-2">Simplemente FELICITACIONES y así mismo con Mayúscula! Duramten años he participado en curso de frunamentos de programación y ninguno se compara con la calidad, el contenido, la pedagogía y la metodología que ustedes tienen.</p>
+                                <a href="#" class="text-decoration-none py-2">Leer la historia completa</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="w-75 mx-auto d-flex flex-column flex-xxl-row rounded p-3 gap-3 border-left-top-darkblue bg-secondary">
+                            <img src="img/user-3.png" alt="user-img" width="80" height="80" class="rounded-top-circle rounded-bottom-circle mx-auto mx-xxl-0">
+                            <div class="text-center text-xxl-start">
+                                <h4 class="fw-bold text-light py-2">Juan Montiel</h4>
+                                <p class="text-dark-emphasis py-2">El curso me sirvió para poder dar el primer paso en mi aprendizaje sobre Python. Había intentado empezar con otros pero habían partido de una base mucho mas amplia suponiendo conocimientos que yo no tenía. Agradezco sinceramente este contenido y la posibilidad real de aprendizaje.</p>
+                                <a href="#" class="text-decoration-none py-2">Leer la historia completa</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- No postergues más tu educación -->
+        <div class="row bg-primary py-5">
+            <div class="col-11 text-center mx-auto col-xxl-9">
+                <h3 class="fw-bold text-light mb-3">No postergues más tu educación, ¡tu futuro te está esperando!</h3>
+                <p class="text-light text-balance mb-5">Un nuevo empleo, mejor salario, mayor calidad de vida, ¡todo lo puedes conseguir con educación! Es el momento de lograr lo que siempre has querido.</p>
+                <button class="btn btn-light fw-bold mb-1 text-primary" type="button">Comienza a estudiar gratis</button>
+                <span class="d-block text-light fw-light fs-11">*Solo necesitas un correo electrónico</span>
+            </div>
+        </div>
+
+        <!-- Menu de navegación para el pie de página -->
+        <div class="row bg-dark px-3 py-4">
+            <div class="col-xxl-2">
+                <h5 class="fw-bold text-light">EDteam</h5>
+                <p class="text-light fw-light fs-14">Estas usando EDteam en</p>
+            </div>
             
-            <li class="header__bar__icon"><img src="img/list.svg" alt="navigator-icon"></li>
-
-            <li class="header__log__in"><a href="#" class="no-decoration">Iniciar sesión</a></li>
-        </ul>
-    </div>
-
-    <header class="header">
-
-        <div class="header__main">
-            <div class="header__main__description">
-                <h1 class="header__title no-margin  bold-weight">Prepárate para un futuro dominado 100% por la tecnología</h1>
-                <p class="hedaer__descriptive no-margin">Aprende Inteligencia Artificial, programación y las habilidades que necesitas para tu futuro profesional en EDteam,
-                9 años la plataforma más obsesionada con la calidad de los cursos.</p>
-                <button class="gold__button" >Comienza a estudiar gratis</button>
-                <span class="hedaer__span" >*No necesitas tarjeta de crédito</span>
-            </div>
-            <img src="img/Family.jpeg" alt="family" class="header__img">
-        </div>
-    </header>
-
-    <!-- Nuevo lanzamiento -->
-
-    <div class="release__div">
-        <section class="release">
-            <img src="img/chevron-left.svg" alt="left-icon" class="left-icon">
-            <img src="img/ingeniería-de-datos.png" alt="Fundamentos de Ingeniería de Datos" class="release__img img">
-            <div class="release__description">
-                <button class="release__button gold__button" >NUEVO LANZAMIENTO</button>
-                <h2 class="release__title no-margin" >Fundamentos de Ingeniería de datos</h2>
-                <span>Disponible desde el miércoles 25 de junio</span>
-                <p class="no-margin" >Aprende a construir y automatizar pipelines de datos usando ETL con Apache Airflow y spark para proyectos profesionales.</p>
-                <a href="#" class="no-decoration" >Details.</a>
-            </div>
-            <img src="img/chevron-right.svg" alt="right-icon" class="right-icon">
-        </section>
-    </div>
-
-    
-    <!-- Main section (escuelas destacadas de EDteam) -->
-
-    <div class="carousel__section">
-        <h2 class="carousel__title m-0">Escuelas destacadas de EDteam</h2>
-        <p class="carousel__description m-0">Creamos rutas de aprendizaje especialmente para guiarte en las herramientas y conocimientos más demandados en el mercado laboral.
-        ¿Con cuál vas a empezar?</p>
-
-        <div class="carousel__div carousel__div__item">
-            <img src="img/python.webp" class="carousel-img" alt="Python">
-            <h3 class="carousel__sub__title fw-bold m-0" >Python</h3>
-            <p class="carousel__sub__description m-0">Estudia y especializate en python, un lenguaje ampliamente utilizado en backend, IA, ciberseguridad, etc.</p>
-            <a href="#" class="no-decoration carousel__link">Comienza a estudiar</a>
-        </div>
-
-        <ul class="carousel__list">
-            <div class="carousel__div">
-                <img src="img/python.webp" class="carousel-img" alt="Python">
-                <h3 class="carousel__sub__title fw-bold m-0" >Python</h3>
-                <p class="carousel__sub__description m-0">Estudia y especializate en python, un lenguaje ampliamente utilizado en backend, IA, ciberseguridad, etc.</p>
-                <a href="#" class="no-decoration carousel__link">Comienza a estudiar</a>
-            </div>
-            <div class="carousel__div">
-                <img src="img/python.webp" class="carousel-img" alt="Python">
-                <h3 class="carousel__sub__title fw-bold m-0" >Html</h3>
-                <p class="carousel__sub__description m-0">Aprende a crear desde ero el esqueleto para distintas páginas web y domina la semantica para las etiquetas.</p>
-                <a href="#" class="no-decoration carousel__link">Comienza a estudiar</a>
-            </div>
-            <div class="carousel__div">
-                <img src="img/python.webp" class="carousel-img" alt="Python">
-                <h3 class="carousel__sub__title fw-bold m-0" >CSS</h3>
-                <p class="carousel__sub__description m-0">Pierdele el miedo al diseño web con este curso interactivo que te enseña desde lo básico hasta lo responsivo.</p>
-                <a href="#" class="no-decoration carousel__link">Comienza a estudiar</a>
-            </div>
-            <div class="carousel__div">
-                <img src="img/python.webp" class="carousel-img" alt="Python">
-                <h3 class="carousel__sub__title fw-bold m-0" >Django</h3>
-                <p class="carousel__sub__description m-0">Aprende a llevar a cabo interfaces interactivas que puedas programar y que utilicen metadatos reales (Backend).</p>
-                <a href="#" class="no-decoration carousel__link">Comienza a estudiar</a>
-            </div>
-            <div class="carousel__div">
-                <img src="img/python.webp" class="carousel-img" alt="Python">
-                <h3 class="carousel__sub__title fw-bold m-0" >React</h3>
-                <p class="carousel__sub__description m-0">Aprende a crear componentes útiles con este framework que te permitirá utilizarlos y evitar procesos repetitivos.</p>
-                <a href="#" class="no-decoration carousel__link">Comienza a estudiar</a>
-            </div>
-        </ul>
-
-
-        <!-- Explora otras escuelas de EDteam -->
-
-        <h2 class="m-0">Explora otras escuelas de EDteam</h2>
-
-        <div class="course__container course__item">
-            <div class="course__description__section">
-                <span><img src="img/circle-fill.svg" alt="fill-circle"> Escuela de</span>
-                <h3 class="fw-bold m-0">Django</h3>
-                <p class="course__description m-0">Fortalece, entrena, estudia, refuerza y domina el maravilloso campo de Django para
-                    poder...
-                </p>
-                <a href="#" class="no-decoration">Comienza a estudiar <img src="img/arrow-right-circle-fill.svg" alt="right-circle"></a>
-            </div>
-
-            <div class="course__log__section">
-                <img src="img/cloud-fill.svg" alt="cloud">
-                <img src="img/django.webp" alt="django" class="course__img">
-            </div>
-        </div>
-
-        <ul class="course__list none-list-style">
-            <li>
-                <img src="img/chevron-left.svg" alt="left-icon" class="left-icon">
-            </li>
-            <li class="course__li">
-                <div class="course__container">
-                    <div class="course__description__section">
-                        <span><img src="img/circle-fill.svg" alt="fill-circle"> Escuela de</span>
-                        <h3 class="fw-bold m-0">Django</h3>
-                        <p class="course__description m-0">Fortalece, entrena, estudia, refuerza y domina el maravilloso campo de Django para
-                        poder interactuar del lado Backend sin miedo.</p>
-                        <a href="#" class="no-decoration">Comienza a estudiar <img src="img/arrow-right-circle-fill.svg" alt="right-circle"></a>
-                    </div>
-
-                    <div class="course__log__section">
-                        <img src="img/cloud-fill.svg" alt="cloud">
-                        <img src="img/django.webp" alt="django" class="course__img">
-                    </div>
+            <div class="row col-xxl-10">
+                <div class="col-6 col-xxl-3 bg-dark">
+                    <h6 class="fw-bold text-light">Acerca de la empresa</h6>
+                    <ul class="list-group list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">¿Que es EDteam?</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">El equipo</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">¡Sé parte del team!</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Los profesores</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Trabaja como profesor</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Enunciado de emisión</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Marca y logotipo</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Cultura</a></li>
+                    </ul>
                 </div>
-            </li>
-            <li class="course__li">
-                <div class="course__container">
-                    <div class="course__description__section">
-                        <span><img src="img/circle-fill.svg" alt="fill-circle"> Escuela de</span>
-                        <h3 class="fw-bold m-0">React</h3>
-                        <p class="course__description m-0">Aprende a crear componentes para interfaces interactivas con los usuarios y repetirlos
-                        cada que resulte necesario y ahorrando mucho tiempo</p>
-                        <a href="#" class="no-decoration">Comienza a estudiar <img src="img/arrow-right-circle-fill.svg" alt="right-circle"></a>
-                    </div>
-
-                    <div class="course__log__section">
-                        <img src="img/cloud-fill.svg" alt="cloud">
-                        <img src="img/react.png" alt="react" class="course__img">
-                    </div>
+                <div class="col-6 col-xxl-3 bg-dark">
+                    <h6 class="fw-bold text-light">Conecta con EDteam</h6>
+                    <ul class="list-group list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Soporte al cliente</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Política de privacidad</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Terminos y condiciones</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Política de reembolsos</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Servicios para colegios y universidades</a></li>
+                    </ul>
                 </div>
-            </li>
-            <li class="course__li">
-                <div class="course__container">
-                    <div class="course__description__section">
-                        <span><img src="img/circle-fill.svg" alt="fill-circle"> Escuela de</span>
-                        <h3 class="fw-bold m-0">Bootstrap</h3>
-                        <p class="course__description m-0">Utiliza este framework en caso de no tener tanta experiencia con CSS o que no estes tan
-                        experimentado en temas de diseño web.</p>
-                        <a href="#" class="no-decoration">Comienza a estudiar <img src="img/arrow-right-circle-fill.svg" alt="right-circle"></a>
-                    </div>
-
-                    <div class="course__log__section">
-                        <img src="img/cloud-fill.svg" alt="cloud">
-                        <img src="img/bootstrap-stack.png" alt="bootstrap" class="course__img">
-                    </div>
+                <div class="col-6 mt-3 mt-xxl-0 col-xxl-3 bg-dark">
+                    <h6 class="fw-bold text-light">Nuestros productos</h6>
+                    <ul class="list-group list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Servicios para empresas</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Canjea cupones</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Regala cursos</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Sube a premium</a></li>
+                    </ul>
                 </div>
-            </li>
-            <li>
-                <img src="img/chevron-right.svg" alt="right-icon" class="right-icon">
-            </li>
-        </ul>
-
-        <button type="button" class="d-grid mx-auto btn btn-primary fw-bold fs-6">¡Explora todas nuestras escuelas!</button>
-    </div>
-
-    <!-- Planes de estudio -->
-
-    <div class="plan__list text-center">
-
-        <h4 class="plan__section__title">Planes de estudio para que #NoTeDetengas</h4>
-
-        <ul class="plan__list__container">
-
-            <li class="plan__container free">
-                <img src="img/icon-gift.svg" alt="gift" class="img-plan">
-                <h3 class="plan__title">Plan gratuito</h3>
-                <p class="plan__description">Toma nuestros 9 cursos gratuitos (incluyen certificado) y mira las primeras clases de todos los cursos.</p>
-                <button type="button" class="btn btn-outline-success fw-bold"><img src="img/heart.svg" alt="heart-icon"> Comienza a estudiar gratis</button>
-            </li>
-
-            <li class="plan__container warning">
-                <img src="img/icon-trophy.svg" alt="trophy" class="img-plan">
-                <h3 class="plan__title">Plan Premium</h3>
-                <p class="plan__description">Acceso total a cientos de cursos, talleres y rutas de EDteam con un único pago.</p>
-                <button type="button" class="btn btn-outline-warning fw-bold"><img src="img/star.svg" alt="star-icon"> ¡Sube a premium ahora!</button>
-            </li>
-
-            <li class="plan__container danger">
-                <img src="img/icon-briefcase.svg" alt="briefcase" class="img-plan">
-                <h3 class="plan__title">Plan para empresas</h3>
-                <p class="plan__description">Capacita a todo tu equipo desde un único lugar y supervisa sus objetivos de aprendizaje.</p>
-                <button type="button" class="btn btn-outline-danger fw-bold"><img src="img/briefcase.svg" alt="briefcase-icon"> Más información</button>
-            </li>
-
-            <li class="plan__container primary">
-                <img src="img/icon-backpack.svg" alt="backpack" class="img-plan">
-                <h3 class="plan__title">Plan para estudiantes</h3>
-                <p class="plan__description">Si estás en la universidad, colegio o instituto, obtén una beca del 50% por un año en EDteam.</p>
-                <button type="button" class="btn btn-outline-primary fw-bold"><img src="img/backpack.svg" alt="backpack-icon"> Más información</button>
-            </li>
-
-        </ul>
-
-        <h4 class="plan__section__title">Tu puedes ser la próxima historia de exito</h4>
-
-        <span class="span-message">Así como ellos tu también puedes alcanzar tus metas.</span>
-
-        <div class="user__card primary">
-            <img src="img/user.png" alt="user" class="user__photo">
-            <h5 class="user__name fw-bold">Juan Carlos <img src="img/flag.svg" alt="flag-icon"></h5>
-            <p class="user__description">Voy a la mitad de carrera en "Ingeniería en informática" en México. En todos estos años jamas aprendí
-                todo lo que se aprendio en este curso.
-            </p>
-            <a href="#" class="no-decoration"><img src="img/file-icon.svg" alt="document"> Lee la historia completa</a>
-        </div>
-    </div>
-
-    <!-- Invitation message -->
-
-    <div class="motivation__message text-center">
-        <aside class="additional__message">
-            <h2 class="motivational__message fw-bold no-margin">No postergues más tu educación, ¡tu futuro te está esperando!</h2>
-            <p class="description__message no-margin">Un nuevo empleo, mejor salario, mayor calidad de vida, ¡todo lo puedes conseguir con educación! Es el momento de lograr lo que siempre has querido.</p>
-            <button type="button" class="btn btn-light fw-bold">Comienza a estudiar gratis</button>
-            <span class="requirement__message">*Solo necesitas un correo electrónico</span>
-        </aside>
-    </div>
-
-    <!-- Footer -->
-
-    <footer class="footer">
-
-        <div class="footer__container">
-            <div class="footer__description">
-                <h3 class="no-margin"><img src="img/circle-fill.svg" alt="circle-fill" class="fill__icon"> EDteam</h3>
-                <span>Estas utilizando EDteam en</span>
-                <button type="button" class="footer__button btn btn-secondary">MXN <img src="img/down-icon.svg" alt="down-icon"></button>
-            </div>
-    
-            <div class="nav__footer">
-                <ul class="footer__list__container none-list-style">
-                    <li>
-                        <div class="footer__list__item">
-                            <h4 class="footer__sub__title">Acerca de la empresa</h4>
-                            <ul class="footer__list none-list-style">
-                                <li class="nav__item">¿Qué es EDteam?</li>
-                                <li class="nav__item">El equipo</li>
-                                <li class="nav__item">¡Sé parte del team!</li>
-                                <li class="nav__item">Los profesores</li>
-                                <li class="nav__item">Trabaja como profesor</li>
-                                <li class="nav__item">Enunciado de misión</li>
-                                <li class="nav__item">Marca y logotipo</li>
-                                <li class="nav__item">Cultura</li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="footer__list__item">
-                            <h4 class="footer__sub__title">Conecta con EDteam</h4>
-                            <ul class="footer__list none-list-style">
-                                <li class="nav__item">Soporte al cliente</li>
-                                <li class="nav__item">Política de privacidad</li>
-                                <li class="nav__item">Terminos y condiciones</li>
-                                <li class="nav__item">Política de reembolsos</li>
-                                <li class="nav__item">Servicios para colegios y universidades</li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="footer__list__item">
-                            <h4 class="footer__sub__title">Nuestros productos</h4>
-                            <ul class="footer__list none-list-style">
-                                <li class="nav__item">Servicios para empresas</li>
-                                <li class="nav__item">Canjea cupones</li>
-                                <li class="nav__item">Regala cursos</li>
-                                <li class="nav__item">Sube a premium</li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="footer__list__item">
-                            <h4 class="footer__sub__title">Recursos gratis</h4>
-                            <ul class="footer__list none-list-style">
-                                <li class="nav__item">Cursos gratis</li>
-                                <li class="nav__item">Blog</li>
-                                <li class="nav__item">Conferencias</li>
-                                <li class="nav__item">Comunidad</li>
-                                <li class="nav__item">Como instalar la App de EDteam</li>
-                                <li class="nav__item">Firmas de correo</li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
+                <div class="col-6 mt-3 mt-xxl-0 col-xxl-3 bg-dark">
+                    <h6 class="fw-bold text-light">Recursos gratis</h6>
+                    <ul class="list-group list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Cursos gratis</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Blog</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Conferencias</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Comunidad</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Como instalar la App de EDteam</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Firmas de correo</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
 
+        <hr class="my-0">
 
-        <hr>
+        <!-- Iconos finales de pie de página -->
+        <div class="row justify-content-xxl-between bg-dark px-5 pt-5 row-footer">
 
-        <div class="footer__social__media">
-            <ul class="location__list">
-                <li>Lima - Perú</li>
+            <ul class="list-group flex-row fs-12-9 justify-content-between px-3 px-xxl-0 col-xxl-5 mb-3 mb-xxl-0 text-dark-emphasis">
+                <li class="list-unstyled">Lima - Perú</li>
                 <li>Bogotá - Colombia</li>
                 <li>Cochabamba - Bolivia</li>
             </ul>
-    
-            <ul class="icon__list none-list-style">
-                <li class="nav__item"><img src="img/slack.svg" alt="slack"></li>
-                <li class="nav__item"><img src="img/youtube.svg" alt="youtube"></li>
-                <li class="nav__item"><img src="img/tiktok.svg" alt="tiktok"></li>
-                <li class="nav__item"><img src="img/instagram.svg" alt="instagram"></li>
-                <li class="nav__item"><img src="img/linkedin.svg" alt="linkedin"></li>
-                <li class="nav__item"><img src="img/twitter.svg" alt="twitter"></li>
-                <li class="nav__item"><img src="img/github.svg" alt="github"></li>
-                <li class="nav__item"><img src="img/whatsapp.svg" alt="whatsapp"></li>
+
+            <ul class="list-group flex-row justify-content-center justify-content-xxl-end list-unstyled gap-2 col-xxl-5 pe-0 gap-4">
+                <li><img src="../img/slack.svg" alt="slack-icon" class="rounded-bottom-circle rounded-top-circle" width="30"></li>
+                <li><img src="../img/youtube.svg" alt="youtube-icon" class="rounded-bottom-circle rounded-top-circle" width="30"></li>
+                <li><img src="../img/tiktok.svg" alt="tiktok-icon" class="rounded-bottom-circle rounded-top-circle" width="30"></li>
+                <li><img src="../img/instagram.svg" alt="instagram-icon" class="rounded-bottom-circle rounded-top-circle" width="30"></li>
+                <li><img src="../img/linkedin.svg" alt="linkedin-icon" class="rounded-bottom-circle rounded-top-circle" width="30"></li>
+                <li><img src="../img/twitter.svg" alt="twitter-icon" class="rounded-bottom-circle rounded-top-circle" width="30"></li>
+                <li><img src="../img/github.svg" alt="github-icon" class="rounded-bottom-circle rounded-top-circle" width="30"></li>
+                <li><img src="../img/whatsapp.svg" alt="whatsapp-icon" class="rounded-bottom-circle rounded-top-circle" width="30"></li>
             </ul>
         </div>
+    </div>
 
-    </footer>
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

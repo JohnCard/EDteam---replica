@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../style/courses.css">
-    <link rel="stylesheet" href="../style/index_v2.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/sass__reader.css">
     <title>Courses gallery</title>
 </head>
 <body>
     <!-- Menu de navegación inicial -->
-    <nav class="navbar bg-primary fixed-top navbar-expand-lg pt-3 shadow-lg">
+    <nav class="navbar bg-primary fixed-top navbar-expand-lg shadow-lg">
         <div class="container-fluid">
-            <a class="navbar-brand text-light" href="#">
+            <a class="navbar-brand text-light" href="../index.html">
                 <img src="../img/python.webp" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
                 EDteam
             </a>
@@ -27,7 +27,7 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index_v2.html">Home</a>
+                            <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -35,7 +35,7 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="courses.html">Courses list</a></li>
-                                <li><a class="dropdown-item" href="detail.html">Detailed python course</a></li>
+                                <li><a class="dropdown-item" href="detail.html">Detailed Django course</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
@@ -52,60 +52,105 @@
                     </ul>
                     <img src="../img/search.svg" alt="search-img" class="me-3 d-none d-xxl-block">
                     <img src="../img/cart.svg" alt="cart-img" class="border-end pe-3 d-none d-xxl-block">
-                    <button type="button" class="btn btn-warning mb-3 mb-xxl-0 mx-xxl-3 fw-bold col-12 col-xxl-2">Inicia sesión</button>
-                    <button type="button" class="btn btn-warning me-xxl-2 fw-bold col-12 col-xxl-2">¡Comienza gratis!</button>
+                    <button type="button" class="btn btn-warning mb-3 mb-xxl-0 mx-xxl-3 fw-bold col-12 col-xxl-2"  data-bs-toggle="modal" data-bs-target="#exampleModal">Inicia sesión</button>
+                    <a role="button" href="register.html" class="btn btn-warning me-xxl-2 fw-bold col-12 col-xxl-2">¡Comienza gratis!</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <div class="container-fluid">
-        <br><br>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark">
+                <div class="modal-header border-bottom-0 pb-0">
+                    <h6 class="modal-title fw-bold text-light" id="staticBackdropLabel">Inicia sesión con</h6>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body px-4">
+                    <div class="row justify-content-evenly">
+                        <button type="button" class="btn btn-light col-5 fw-bold">Google</button>
+                        <button type="button" class="btn btn-light col-5 fw-bold">Github</button>
+                    </div>
+                    <hr class="text-light">
+                    <h6 class="text-light fw-bold mb-3">O utiliza tu correo electrónico</h6>
+                    <label for="email" class="form-label text-light">Correo electrónico</label>
+                    <input type="email" name="email" id="email" class="form-control py-2 px-3 bg-secondary mb-3" placeholder="Escribe tu correo electrónico">
+                    <label for="password" class="form-label text-light">Contraseña</label>
+                    <input type="password" name="password" id="password" class="form-control py-2 px-3 bg-secondary mb-2" placeholder="Escribe tu contraseña">
+                    <a href="#" class="text-decoration-none fw-light fs-14">¿Olvidaste tu contraseña?</a>
+                    <button type="button" class="btn btn-primary col-12 fw-bold mt-4 py-2">Iniciar sesión</button>
+                </div>
+                <div class="modal-footer justify-content-center border-top-0">
+                    <p class="text-light fw-light text-center">¿No tienes una cuenta? <span class="text-primary fw-light">Regístrate gratis</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid pt-5">
 
         <!-- Nuevos lanzamientos -->
         <div class="row px-4 bg-secondary py-5">
-            <div id="carouselExampleFade-1" class="carousel slide carousel-fade carousel-dark">
+
+            <div id="carouselExampleFade-1" class="carousel slide carousel-dark">
+
                 <div class="carousel-inner">
+
                     <div class="carousel-item active">
                         <div class="d-flex flex-column flex-xxl-row justify-content-xxl-center">
-                            <div class="order-1 order-xxl-0 text-center text-xxl-start bg-secondary mxw-600 mt-3 mt-xxl-0
-                            d-flex flex-column align-items-center align-items-xxl-start justify-content-evenly gap-3 gap-xxl-0">
+                            <div class="order-1 order-xxl-0 text-center text-xxl-start bg-secondary mxw-600 mt-3 mt-xxl-0 d-flex flex-column align-items-center align-items-xxl-start justify-content-evenly gap-3 gap-xxl-0">
                                 <button class="btn btn-warning fw-bold" role="button">Nuevo lanzamiento</button>
                                 <h2 class="fw-bold text-light">Big Data con Apache Spark</h2>
                                 <span class="text-dark-emphasis">Disponible desde el jueves 07 de agosto</span>
-                                <p class="text-light">Transforma y análisa grandes volumenes de datos con Apache Spark y Pyspark desde cero.</p>
+                                <p class="text-light">Aprende las bases de HTML para poder introducirte en el mundo del desarrollo web y aprender a guiarte por una semántica correcta para tus sitios web.</p>
                                 <a href="#" class="text-decoration-none fw-light">Más detalles.</a>
                             </div>
-                            <img src="../img/user.png" alt="user-img" class="img-358-190-400-360 d-block">
+                            <img src="../img/html.png" alt="user-img" class="img-358-190-400-360 d-block">
                         </div>
                     </div>
+
                     <div class="carousel-item">
                         <div class="d-flex flex-column flex-xxl-row justify-content-xxl-center">
-                            <div class="order-1 order-xxl-0 text-center text-xxl-start bg-secondary mxw-600 mt-3 mt-xxl-0
-                            d-flex flex-column align-items-center align-items-xxl-start justify-content-evenly gap-3 gap-xxl-0">
-                                <button class="btn btn-warning fw-bold" role="button">Nuevo lanzamiento</button>
-                                <h2 class="fw-bold text-light">Big Data con Apache Python</h2>
-                                <span class="text-dark-emphasis">Disponible desde el jueves 07 de agosto</span>
-                                <p class="text-light">Transforma y análisa grandes volumenes de datos con Apache Spark y Pyspark desde cero.</p>
+                            <div class="order-1 order-xxl-0 text-center text-xxl-start bg-secondary mxw-600 mt-3 mt-xxl-0 d-flex flex-column align-items-center align-items-xxl-start justify-content-evenly gap-3 gap-xxl-0">
+                                <button class="btn btn-warning fw-bold mb-2" role="button">Nuevo lanzamiento</button>
+                                <h2 class="fw-bold text-light">CSS</h2>
+                                <span class="text-dark-emphasis">Disponible desde el viernes 08 de agosto</span>
+                                <p class="text-light">Aprende las bases del lenguaje que te permite darle un diseño correcto a tus sitios web y dar una mejor experiencia de usuario.</p>
                                 <a href="#" class="text-decoration-none fw-light">Más detalles.</a>
                             </div>
-                            <img src="../img/user.png" alt="user-img" class="img-358-190-400-360 d-block">
+                            <img src="../img/css.png" alt="user-img" class="img-358-190-400-360 d-block">
                         </div>
                     </div>
+
                     <div class="carousel-item">
                         <div class="d-flex flex-column flex-xxl-row justify-content-xxl-center">
-                            <div class="order-1 order-xxl-0 text-center text-xxl-start bg-secondary mxw-600 mt-3 mt-xxl-0
-                            d-flex flex-column align-items-center align-items-xxl-start justify-content-evenly gap-3 gap-xxl-0">
-                                <button class="btn btn-warning fw-bold" role="button">Nuevo lanzamiento</button>
-                                <h2 class="fw-bold text-light">Big Data con Apache React</h2>
-                                <span class="text-dark-emphasis">Disponible desde el jueves 07 de agosto</span>
-                                <p class="text-light">Transforma y análisa grandes volumenes de datos con Apache Spark y Pyspark desde cero.</p>
+                            <div class="order-1 order-xxl-0 text-center text-xxl-start bg-secondary mxw-600 mt-3 mt-xxl-0 d-flex flex-column align-items-center align-items-xxl-start justify-content-evenly gap-3 gap-xxl-0">
+                                <button class="btn btn-warning fw-bold mb-2" role="button">Nuevo lanzamiento</button>
+                                <h2 class="fw-bold text-light">JavaScript desde cero</h2>
+                                <span class="text-dark-emphasis">Disponible desde el miércoles 06 de agosto</span>
+                                <p class="text-light">Aprender a utilizar JavaScript, el lenguaje universal para poder dar interactividad a tus sitios web y hacer que tus proyectos cobren vida.</p>
                                 <a href="#" class="text-decoration-none fw-light">Más detalles.</a>
                             </div>
-                            <img src="../img/user.png" alt="user-img" class="img-358-190-400-360 d-block">
+                            <img src="../img/javascript.png" alt="user-img" class="img-358-190-400-360 d-block">
                         </div>
                     </div>
+
+                    <div class="carousel-item">
+                        <div class="d-flex flex-column flex-xxl-row justify-content-xxl-center">
+                            <div class="order-1 order-xxl-0 text-center text-xxl-start bg-secondary mxw-600 mt-3 mt-xxl-0 d-flex flex-column align-items-center align-items-xxl-start justify-content-evenly gap-3 gap-xxl-0">
+                                <button class="btn btn-warning fw-bold mb-2" role="button">Nuevo lanzamiento</button>
+                                <h2 class="fw-bold text-light">Python desde cero 2025</h2>
+                                <span class="text-dark-emphasis">Disponible desde el martes 05 de agosto</span>
+                                <p class="text-light">Introducete en el mundo de Python, un lenguaje sumamente sencillo de aprender y que te abrira las puertas automaticamente a un sin fin de posibilidades de aprendizaje ya sea para especializarte en desarrolo web, hacking ético, análisis de datos y mucho más.</p>
+                                <a href="#" class="text-decoration-none fw-light">Más detalles.</a>
+                            </div>
+                            <img src="../img/python.webp" alt="user-img" class="img-358-190-400-360 d-block">
+                        </div>
+                    </div>
+
                 </div>
+
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade-1" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
@@ -114,19 +159,21 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
+
             </div>
+
         </div>
 
         <!-- Cursos más vistos -->
         <div class="row p-xxl-5 bg-secondary">
             <h5 class="fw-bold text-light">Cursos más vistos</h5>
+            <img src="../img/bootstrap-stack.png" alt="django-img" height="135" class="col-6 d-xxl-none">
             <img src="../img/django.webp" alt="django-img" height="135" class="col-6 d-xxl-none">
-            <img src="../img/django.webp" alt="django-img" height="135" class="col-6 d-xxl-none">
-            <img src="../img/django.webp" alt="django-img" height="135" class="col d-none d-xxl-block">
-            <img src="../img/django.webp" alt="django-img" height="135" class="col d-none d-xxl-block">
-            <img src="../img/django.webp" alt="django-img" height="135" class="col d-none d-xxl-block">
-            <img src="../img/django.webp" alt="django-img" height="135" class="col d-none d-xxl-block">
-            <img src="../img/django.webp" alt="django-img" height="135" class="col d-none d-xxl-block">
+            <img src="../img/chat gpt.webp" alt="django-img" height="135" class="col d-none d-xxl-block">
+            <img src="../img/flask.png" alt="django-img" height="135" class="col d-none d-xxl-block">
+            <img src="../img/javascript.png" alt="django-img" height="135" class="col d-none d-xxl-block">
+            <img src="../img/tailwind.webp" alt="django-img" height="135" class="col d-none d-xxl-block">
+            <img src="../img/angular.png" alt="django-img" height="135" class="col d-none d-xxl-block">
         </div>
 
         <!-- Listado de cursos -->
@@ -134,11 +181,11 @@
             <h5 class="fw-bold text-light mt-5 mt-xxl-0">Todos nuestros cursos</h5>
             <span class="span-message text-warning mb-3">Desbloquealos con una suscripción premium</span>
             <div class="col-12 col-sm-6 col-lg-3 mb-4 mb-xxl-4 m-auto m-xxl-0">
-                <div class="card">
+                <div class="card div-card">
                     <img class="card-img-top" src="../img/django.webp" alt="django-img" height="180">
                     <div class="card-body bg-secondary">
                         <h3 class="card-title fs-6 fw-bold text-light">Desarrollo web con Django</h3>
-                        <p class="card-text fs-6 text-dark-emphasis fw-bold">Lorem, ipsum dolor sit amet consectetur adipisicing elit!</p>
+                        <p class="card-text fs-6 text-dark-emphasis fw-bold">Crea aplicaciones seguras y escalables en poco tiempo con Django, el framework de Python que usa la Nasa y Spotify.</p>
                     </div>
                     <div class="card-footer bg-dark">
                         <span class="span-message fw-bold text-primary">$350 MXN</span>
@@ -146,11 +193,11 @@
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-lg-3 mb-4 mb-xxl-4 m-auto m-xxl-0">
-                <div class="card">
-                    <img class="card-img-top" src="../img/django.webp" alt="django-img" height="180">
+                <div class="card div-card">
+                    <img class="card-img-top" src="../img/php.png" alt="django-img" height="180">
                     <div class="card-body bg-secondary">
-                        <h3 class="card-title fs-6 fw-bold text-light">Desarrollo web con Django</h3>
-                        <p class="card-text fs-6 text-dark-emphasis fw-bold">Lorem, ipsum dolor sit amet consectetur adipisicing elit!</p>
+                        <h3 class="card-title fs-6 fw-bold text-light">Curso: PHP 8 desde cero</h3>
+                        <p class="card-text fs-6 text-dark-emphasis fw-bold">Aprende la última versión de PHP, el lenguaje de programación backend más importante de la web. Con este lenguaje domin...</p>
                     </div>
                     <div class="card-footer bg-dark">
                         <span class="span-message fw-bold text-primary">$350 MXN</span>
@@ -158,11 +205,11 @@
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-lg-3 mb-4 mb-xxl-4 m-auto m-xxl-0">
-                <div class="card">
-                    <img class="card-img-top" src="../img/django.webp" alt="django-img" height="180">
+                <div class="card div-card">
+                    <img class="card-img-top" src="../img/python.webp" alt="django-img" height="180">
                     <div class="card-body bg-secondary">
-                        <h3 class="card-title fs-6 fw-bold text-light">Desarrollo web con Django</h3>
-                        <p class="card-text fs-6 text-dark-emphasis fw-bold">Lorem, ipsum dolor sit amet consectetur adipisicing elit!</p>
+                        <h3 class="card-title fs-6 fw-bold text-light">Curso: Python desde cero 2023</h3>
+                        <p class="card-text fs-6 text-dark-emphasis fw-bold">Domina la última versión de uno de los lenguajes más importantes y aprende a crear un To-Do List.</p>
                     </div>
                     <div class="card-footer bg-dark">
                         <span class="span-message fw-bold text-primary">$350 MXN</span>
@@ -170,11 +217,11 @@
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-lg-3 mb-4 mb-xxl-4 m-auto m-xxl-0">
-                <div class="card">
-                    <img class="card-img-top" src="../img/django.webp" alt="django-img" height="180">
+                <div class="card div-card">
+                    <img class="card-img-top" src="../img/html.png" alt="django-img" height="180">
                     <div class="card-body bg-secondary">
-                        <h3 class="card-title fs-6 fw-bold text-light">Desarrollo web con Django</h3>
-                        <p class="card-text fs-6 text-dark-emphasis fw-bold">Lorem, ipsum dolor sit amet consectetur adipisicing elit!</p>
+                        <h3 class="card-title fs-6 fw-bold text-light">Curso: HTML desde cero (2024)</h3>
+                        <p class="card-text fs-6 text-dark-emphasis fw-bold">Domina el lenguaje sobre el que está construida toda la web con el mejor curso en español.</p>
                     </div>
                     <div class="card-footer bg-dark">
                         <span class="span-message fw-bold text-primary">$350 MXN</span>
@@ -182,11 +229,11 @@
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-lg-3 mb-4 mb-xxl-4 m-auto m-xxl-0">
-                <div class="card">
-                    <img class="card-img-top" src="../img/django.webp" alt="django-img" height="180">
+                <div class="card div-card">
+                    <img class="card-img-top" src="../img/css.png" alt="django-img" height="180">
                     <div class="card-body bg-secondary">
-                        <h3 class="card-title fs-6 fw-bold text-light">Desarrollo web con Django</h3>
-                        <p class="card-text fs-6 text-dark-emphasis fw-bold">Lorem, ipsum dolor sit amet consectetur adipisicing elit!</p>
+                        <h3 class="card-title fs-6 fw-bold text-light">Curso: CSS desde cero (2024)</h3>
+                        <p class="card-text fs-6 text-dark-emphasis fw-bold">Domina el lenguaje que hace hermosa la web con el MEJOR CURSO EN ESPAÑOL. Con css crearás los más impresionantes diseños que harán que tus clientes se enamoren automatica...</p>
                     </div>
                     <div class="card-footer bg-dark">
                         <span class="span-message fw-bold text-primary">$350 MXN</span>
@@ -194,11 +241,11 @@
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-lg-3 mb-4 mb-xxl-4 m-auto m-xxl-0">
-                <div class="card">
-                    <img class="card-img-top" src="../img/django.webp" alt="django-img" height="180">
+                <div class="card div-card">
+                    <img class="card-img-top" src="../img/react.png" alt="django-img" height="180">
                     <div class="card-body bg-secondary">
-                        <h3 class="card-title fs-6 fw-bold text-light">Desarrollo web con Django</h3>
-                        <p class="card-text fs-6 text-dark-emphasis fw-bold">Lorem, ipsum dolor sit amet consectetur adipisicing elit!</p>
+                        <h3 class="card-title fs-6 fw-bold text-light">Curso: React desde cero</h3>
+                        <p class="card-text fs-6 text-dark-emphasis fw-bold">Crea interfaces de usuario reutilizables y basadas en componentes con la librería para el desarrollo frontend más usada en el mundo. Esta librería también te puede brindar las mejores...</p>
                     </div>
                     <div class="card-footer bg-dark">
                         <span class="span-message fw-bold text-primary">$350 MXN</span>
@@ -206,11 +253,11 @@
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-lg-3 mb-4 mb-xxl-4 m-auto m-xxl-0">
-                <div class="card">
-                    <img class="card-img-top" src="../img/django.webp" alt="django-img" height="180">
+                <div class="card div-card">
+                    <img class="card-img-top" src="../img/angular.png" alt="django-img" height="180">
                     <div class="card-body bg-secondary">
-                        <h3 class="card-title fs-6 fw-bold text-light">Desarrollo web con Django</h3>
-                        <p class="card-text fs-6 text-dark-emphasis fw-bold">Lorem, ipsum dolor sit amet consectetur adipisicing elit!</p>
+                        <h3 class="card-title fs-6 fw-bold text-light">Curso: Angular desde cero (2024)</h3>
+                        <p class="card-text fs-6 text-dark-emphasis fw-bold">Domina la última versión de Angular, uno de los frameworks JavaScript más populares para crear apps web escalables y de alto rendimiento.</p>
                     </div>
                     <div class="card-footer bg-dark">
                         <span class="span-message fw-bold text-primary">$350 MXN</span>
@@ -218,107 +265,11 @@
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-lg-3 mb-4 mb-xxl-4 m-auto m-xxl-0">
-                <div class="card">
-                    <img class="card-img-top" src="../img/django.webp" alt="django-img" height="180">
+                <div class="card div-card">
+                    <img class="card-img-top" src="../img/Vue.png" alt="django-img" height="180">
                     <div class="card-body bg-secondary">
-                        <h3 class="card-title fs-6 fw-bold text-light">Desarrollo web con Django</h3>
-                        <p class="card-text fs-6 text-dark-emphasis fw-bold">Lorem, ipsum dolor sit amet consectetur adipisicing elit!</p>
-                    </div>
-                    <div class="card-footer bg-dark">
-                        <span class="span-message fw-bold text-primary">$350 MXN</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-lg-3 mb-4 mb-xxl-4 m-auto m-xxl-0">
-                <div class="card">
-                    <img class="card-img-top" src="../img/django.webp" alt="django-img" height="180">
-                    <div class="card-body bg-secondary">
-                        <h3 class="card-title fs-6 fw-bold text-light">Desarrollo web con Django</h3>
-                        <p class="card-text fs-6 text-dark-emphasis fw-bold">Lorem, ipsum dolor sit amet consectetur adipisicing elit!</p>
-                    </div>
-                    <div class="card-footer bg-dark">
-                        <span class="span-message fw-bold text-primary">$350 MXN</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-lg-3 mb-4 mb-xxl-4 m-auto m-xxl-0">
-                <div class="card">
-                    <img class="card-img-top" src="../img/django.webp" alt="django-img" height="180">
-                    <div class="card-body bg-secondary">
-                        <h3 class="card-title fs-6 fw-bold text-light">Desarrollo web con Django</h3>
-                        <p class="card-text fs-6 text-dark-emphasis fw-bold">Lorem, ipsum dolor sit amet consectetur adipisicing elit!</p>
-                    </div>
-                    <div class="card-footer bg-dark">
-                        <span class="span-message fw-bold text-primary">$350 MXN</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-lg-3 mb-4 mb-xxl-4 m-auto m-xxl-0">
-                <div class="card">
-                    <img class="card-img-top" src="../img/django.webp" alt="django-img" height="180">
-                    <div class="card-body bg-secondary">
-                        <h3 class="card-title fs-6 fw-bold text-light">Desarrollo web con Django</h3>
-                        <p class="card-text fs-6 text-dark-emphasis fw-bold">Lorem, ipsum dolor sit amet consectetur adipisicing elit!</p>
-                    </div>
-                    <div class="card-footer bg-dark">
-                        <span class="span-message fw-bold text-primary">$350 MXN</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-lg-3 mb-4 mb-xxl-4 m-auto m-xxl-0">
-                <div class="card">
-                    <img class="card-img-top" src="../img/django.webp" alt="django-img" height="180">
-                    <div class="card-body bg-secondary">
-                        <h3 class="card-title fs-6 fw-bold text-light">Desarrollo web con Django</h3>
-                        <p class="card-text fs-6 text-dark-emphasis fw-bold">Lorem, ipsum dolor sit amet consectetur adipisicing elit!</p>
-                    </div>
-                    <div class="card-footer bg-dark">
-                        <span class="span-message fw-bold text-primary">$350 MXN</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-lg-3 mb-4 mb-xxl-4 m-auto m-xxl-0">
-                <div class="card">
-                    <img class="card-img-top" src="../img/django.webp" alt="django-img" height="180">
-                    <div class="card-body bg-secondary">
-                        <h3 class="card-title fs-6 fw-bold text-light">Desarrollo web con Django</h3>
-                        <p class="card-text fs-6 text-dark-emphasis fw-bold">Lorem, ipsum dolor sit amet consectetur adipisicing elit!</p>
-                    </div>
-                    <div class="card-footer bg-dark">
-                        <span class="span-message fw-bold text-primary">$350 MXN</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-lg-3 mb-4 mb-xxl-4 m-auto m-xxl-0">
-                <div class="card">
-                    <img class="card-img-top" src="../img/django.webp" alt="django-img" height="180">
-                    <div class="card-body bg-secondary">
-                        <h3 class="card-title fs-6 fw-bold text-light">Desarrollo web con Django</h3>
-                        <p class="card-text fs-6 text-dark-emphasis fw-bold">Lorem, ipsum dolor sit amet consectetur adipisicing elit!</p>
-                    </div>
-                    <div class="card-footer bg-dark">
-                        <span class="span-message fw-bold text-primary">$350 MXN</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-lg-3 mb-4 mb-xxl-4 m-auto m-xxl-0">
-                <div class="card">
-                    <img class="card-img-top" src="../img/django.webp" alt="django-img" height="180">
-                    <div class="card-body bg-secondary">
-                        <h3 class="card-title fs-6 fw-bold text-light">Desarrollo web con Django</h3>
-                        <p class="card-text fs-6 text-dark-emphasis fw-bold">Lorem, ipsum dolor sit amet consectetur adipisicing elit!</p>
-                    </div>
-                    <div class="card-footer bg-dark">
-                        <span class="span-message fw-bold text-primary">$350 MXN</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-lg-3 mb-4 mb-xxl-4 m-auto m-xxl-0">
-                <div class="card">
-                    <img class="card-img-top" src="../img/django.webp" alt="django-img" height="180">
-                    <div class="card-body bg-secondary">
-                        <h3 class="card-title fs-6 fw-bold text-light">Desarrollo web con Django</h3>
-                        <p class="card-text fs-6 text-dark-emphasis fw-bold">Lorem, ipsum dolor sit amet consectetur adipisicing elit!</p>
+                        <h3 class="card-title fs-6 fw-bold text-light">Curso: Vue.Js desde cero 2024</h3>
+                        <p class="card-text fs-6 text-dark-emphasis fw-bold">Domina Vue.js en su versión más actualizada y crea interfaces de usuario dinámicas y eficientes. Vue al igual wue Vue o React es un framework altamen...</p>
                     </div>
                     <div class="card-footer bg-dark">
                         <span class="span-message fw-bold text-primary">$350 MXN</span>
@@ -384,7 +335,7 @@
         <hr class="my-0">
 
         <!-- Iconos finales de pie de página -->
-        <div class="row justify-content-xxl-between bg-dark px-5 py-5">
+        <div class="row justify-content-xxl-between bg-dark px-5 pt-5 row-footer">
 
             <ul class="list-group flex-row fs-12-9 justify-content-between px-3 px-xxl-0 col-xxl-5 mb-3 mb-xxl-0 text-dark-emphasis">
                 <li class="list-unstyled">Lima - Perú</li>
@@ -404,47 +355,6 @@
             </ul>
         </div>
     </div>
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
 
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>

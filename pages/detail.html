@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../style/detail.css">
+    <link rel="stylesheet" href="../style/sass__reader.css">
     <title>Individual course</title>
 </head>
 <body class="bg-info">
     <!-- Menu de navegación inicial -->
-    <nav class="navbar bg-primary fixed-top navbar-expand-lg pt-3 shadow-lg">
+    <nav class="navbar bg-primary fixed-top navbar-expand-lg shadow-lg">
         <div class="container-fluid">
-            <a class="navbar-brand text-light" href="#">
+            <a class="navbar-brand text-light" href="../index.html">
                 <img src="../img/python.webp" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
                 EDteam
             </a>
@@ -26,7 +26,7 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index_v2.html">Home</a>
+                            <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -34,7 +34,7 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="courses.html">Courses list</a></li>
-                                <li><a class="dropdown-item" href="detail.html">Detailed python course</a></li>
+                                <li><a class="dropdown-item" href="detail.html">Detailed Django course</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
@@ -51,28 +51,55 @@
                     </ul>
                     <img src="../img/search.svg" alt="search-img" class="me-3 d-none d-xxl-block">
                     <img src="../img/cart.svg" alt="cart-img" class="border-end pe-3 d-none d-xxl-block">
-                    <button type="button" class="btn btn-warning mb-3 mb-xxl-0 mx-xxl-3 fw-bold col-12 col-xxl-2">Inicia sesión</button>
-                    <button type="button" class="btn btn-warning me-xxl-2 fw-bold col-12 col-xxl-2">¡Comienza gratis!</button>
+                    <button type="button" class="btn btn-warning mb-3 mb-xxl-0 mx-xxl-3 fw-bold col-12 col-xxl-2"  data-bs-toggle="modal" data-bs-target="#exampleModal">Inicia sesión</button>
+                    <a role="button" href="register.html" class="btn btn-warning me-xxl-2 fw-bold col-12 col-xxl-2">¡Comienza gratis!</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <br>
-    <br>
-    <br>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark">
+                <div class="modal-header border-bottom-0 pb-0">
+                    <h6 class="modal-title fw-bold text-light" id="staticBackdropLabel">Inicia sesión con</h6>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body px-4">
+                    <div class="row justify-content-evenly">
+                        <button type="button" class="btn btn-light col-5 fw-bold">Google</button>
+                        <button type="button" class="btn btn-light col-5 fw-bold">Github</button>
+                    </div>
+                    <hr class="text-light">
+                    <h6 class="text-light fw-bold mb-3">O utiliza tu correo electrónico</h6>
+                    <label for="email" class="form-label text-light">Correo electrónico</label>
+                    <input type="email" name="email" id="email" class="form-control py-2 px-3 bg-secondary mb-3" placeholder="Escribe tu correo electrónico">
+                    <label for="password" class="form-label text-light">Contraseña</label>
+                    <input type="password" name="password" id="password" class="form-control py-2 px-3 bg-secondary mb-2" placeholder="Escribe tu contraseña">
+                    <a href="#" class="text-decoration-none fw-light fs-14">¿Olvidaste tu contraseña?</a>
+                    <button type="button" class="btn btn-primary col-12 fw-bold mt-4 py-2">Iniciar sesión</button>
+                </div>
+                <div class="modal-footer justify-content-center border-top-0">
+                    <p class="text-light fw-light text-center">¿No tienes una cuenta? <span class="text-primary fw-light">Regístrate gratis</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <div class="container nav-header text-light">
+    <!-- Header -->
+    <div class="container-fluid text-light mt-80 px-xxl-5">
         <!-- Nav breadcrumb-divider section -->
         <div class="row">
             <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-                <ol class="breadcrumb">
+                <ol class="breadcrumb ">
                     <li class="breadcrumb-item"><a href="#" class="text-decoration-none">Escuelas</a></li>
-                    <li class="breadcrumb-item" aria-current="page">Programación y desarrolo web</li>
-                    <li class="breadcrumb-item">Programación desde cero</li>
+                    <li class="breadcrumb-item">Desarrollo backend</li>
+                    <li class="breadcrumb-item">Backend con Python</li>
+                    <li class="breadcrumb-item">Desarrollo web con Django</li>
                 </ol>
             </nav>
-            <h1 class="fw-bold main-title">Curso: Python desde cero 2023</h1>
+            <h1 class="fw-bold">Curso: Desarrollo web con Django</h1>
         </div>
 
         <!-- Header main section -->
@@ -80,11 +107,11 @@
             <div class="col-xxl-6 order-xxl-1">
                 <img src="../img/django.webp" alt="python-img" class="col-11 col-xxl-12 rounded d-block mx-auto">
                 <div class="row ms-3 ms-xxl-1 mt-2">
-                    <ol class="breadcrumb mb-0 col-xxl-6 justify-content-xxl-between" style="--bs-breadcrumb-divider: '|';" aria-label="breadcrumb">
+                    <ol class="breadcrumb fs-13 mb-0 col-xxl-6 justify-content-xxl-between" style="--bs-breadcrumb-divider: '|';" aria-label="breadcrumb">
                         <li class="breadcrumb-item">4.6</li>
-                        <li class="breadcrumb-item">Feb 2023</li>
+                        <li class="breadcrumb-item">Ene 2023</li>
                         <li class="breadcrumb-item">6 H</li>
-                        <li class="breadcrumb-item">6.6 mil</li>
+                        <li class="breadcrumb-item">1.2 mil</li>
                         <li class="breadcrumb-item">Básico</li>
                     </ol>
                     <p class="text-success p-0 col-xxl-6 text-xxl-end">Mira las primeras clases gratis</p>
@@ -93,10 +120,10 @@
 
             <div class="col-xxl-6 order-xxl-0">
                 <div class="alert alert-light" role="alert">
-                    A simple light alert—check it out!
+                    Crea aplicaciones seguras y escalables en poco tiempo con Django, el framework de Python que usa la Nasa y Spotify.
                 </div>
                 <p>¿Que aprenderás?</p>
-                <p class="fw-light">Los fundamentos de Python, empezando con variables, palabras reservadas, tipos de datos, estructuras de control y funciones.</p>
+                <p class="fw-light">Las bases del desarrollo web con Django hasta la creación de una aplicación básica conectada a una base de datos, utilizaremos como ejemplo final la creación de un blog.</p>
             </div>
         </div>
 
@@ -105,11 +132,11 @@
         <div class="row ms-1 ms-xxl-0">
             <div class="col-xxl-3 p-0">
                 <button type="button" class="btn btn-warning fw-bold">Compra una suscripción premium</button>
-                <span class="span-message d-block">*Acceso a todos los cursos, rutas y escuelas de EDteam</span>
+                <span class="span-message fs-9 d-block mb-2 mb-xxl-0">*Acceso a todos los cursos, rutas y escuelas de EDteam</span>
             </div>
             <div class="col-xxl-3 p-0">
                 <button type="button" class="btn btn-outline-primary fw-bold">Compra este curso: $500 MXN</button>
-                <span class="span-message d-block">*Acceso de por vida solo a este curso</span>
+                <span class="span-message fs-9 d-block">*Acceso de por vida solo a este curso</span>
             </div>
         </div>
     </div>
@@ -131,119 +158,117 @@
                 <div class="accordion mt-3" id="accordionExample">
                     <div class="accordion-item bg-info">
                         <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            <strong>1. Introducción a python</strong>
-                        </button>
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <strong>1. Introducción al desarrollo web con Django</strong>
+                            </button>
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <ul class="list-group">
-                                <li class="list-group-item">1.1 - Bienvenida al curso de python</li>
-                                <li class="list-group-item">1.2 - ¿Qué es python y porque aprenderlo?</li>
-                                <li class="list-group-item">1.3 - Instalación de Python en Windows</li>
-                                <li class="list-group-item">1.4 - Introducción al modo interactivo de python</li>
-                                <li class="list-group-item">1.5 - Operadores matemáticos, lógicos y relacionales</li>
-                                <li class="list-group-item">1.6 - Palabras reservadas en python</li>
-                                <li class="list-group-item">1.7 - Entrada de usuario por modo interactivo</li>
-                            </ul>
-                        </div>
+                            <div class="accordion-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item">1.1 - Presentación y Bienvenida</li>
+                                    <li class="list-group-item">1.2 - Qué es, porque usarlo y cómo iniciar con Django</li>
+                                    <li class="list-group-item">1.3 - Creación de Entorno Virtual</li>
+                                    <li class="list-group-item">1.4 - Creación de un proyecto con Django</li>
+                                    <li class="list-group-item">1.5 - Creación de una aplicación real en minutos</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div class="accordion-item bg-info">
                         <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            <strong>2. Variables y tipos de datos</strong>
-                        </button>
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <strong>2. Primeros Pasos con Django</strong>
+                            </button>
                         </h2>
                         <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <ul class="list-group">
-                                <li class="list-group-item">2.1 - Variables y constantes</li>
-                                <li class="list-group-item">2.2 - Tipos de datos básicos (Numéricos, cadenas y booleanos)</li>
-                                <li class="list-group-item">2.3 - Conversión de tipos de datos</li>
-                                <li class="list-group-item">2.4 - Listas</li>
-                                <li class="list-group-item">2.5 - Tuplas</li>
-                                <li class="list-group-item">2.6 - Diccionarios</li>
-                                <li class="list-group-item">2.7 - Sets</li>
-                                <li class="list-group-item">2.8 - None y Null</li>
-                            </ul>
-                        </div>
+                            <div class="accordion-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item">2.1 - Estructura de carpetas creadas por Django</li>
+                                    <li class="list-group-item">2.2 - Conociendo el archivo settings.py</li>
+                                    <li class="list-group-item">2.3 - Conociendo el archivo urls.py</li>
+                                    <li class="list-group-item">2.4 - Manejando Request y Response</li>
+                                    <li class="list-group-item">2.5 - Paso de variables por metodo GET</li>
+                                    <li class="list-group-item">2.6 - Paso de variables por metodo POST</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div class="accordion-item bg-info">
                         <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            <strong>3. Estructuras de control</strong>
-                        </button>
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <strong>3. Patrón Modelo Vista Template</strong>
+                            </button>
                         </h2>
                         <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <ul class="list-group">
-                                <li class="list-group-item">3.1 - Condiciones: If y else</li>
-                                <li class="list-group-item">3.2 - Bucle while</li>
-                                <li class="list-group-item">3.3 - Bucle for</li>
-                                <li class="list-group-item">3.4 - Continue, Break y Else en bucle For</li>
-                                <li class="list-group-item">3.5 - Declaración Match (Switch)</li>
-                                <li class="list-group-item">3.6 - Manejo de errores con Try, Except y Finally</li>
-                            </ul>
-                        </div>
+                            <div class="accordion-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item">3.1 - Introducción al patrón MVT</li>
+                                    <li class="list-group-item">3.2 - Creación de tu primer app con patron MTV</li>
+                                    <li class="list-group-item">3.3 - Configuración de vistas del App</li>
+                                    <li class="list-group-item">3.4 - Configuración de platillas del App</li>
+                                    <li class="list-group-item">3.5 - Configuración de rutas del App</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div class="accordion-item bg-info">
                         <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            <strong>4. Uso y manejo de funciones con Python</strong>
-                        </button>
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <strong>4. Modelos y Migraciones</strong>
+                            </button>
                         </h2>
                         <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <ul class="list-group">
-                                <li class="list-group-item">4.1 - ¿Qué son las funciones?</li>
-                                <li class="list-group-item">4.2 - Estructura de una Función Python</li>
-                                <li class="list-group-item">4.3 - Retornar multiples valores desde una Función Python</li>
-                                <li class="list-group-item">4.4 - Funciones y no procedimientos</li>
-                                <li class="list-group-item">4.5 - Parámetros especiales y argumentos de funciones</li>
-                                <li class="list-group-item">4.6 - Parámetros args y kargs</li>
-                            </ul>
-                        </div>
+                            <div class="accordion-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item">4.1 - Introducción al ORM de Django</li>
+                                    <li class="list-group-item">4.2 - Creación de modelos</li>
+                                    <li class="list-group-item">4.3 - Migraciones con el ORM</li>
+                                    <li class="list-group-item">4.4 - Ejercicios con el shell de python</li>
+                                    <li class="list-group-item">4.5 - Configuración del modelo Users</li>
+                                    <li class="list-group-item">4.6 - Django Administrator</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div class="accordion-item bg-info">
                         <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            <strong>5. Creación de un To-Do List desde el modo interactivo de Python</strong>
-                        </button>
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <strong>5. Trabajando con archivos estáticos</strong>
+                            </button>
                         </h2>
                         <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <ul class="list-group">
-                                <li class="list-group-item">5.1 - Creación de la función principal y punto de entrada</li>
-                                <li class="list-group-item">5.2 - Menú de opciones del To Do</li>
-                                <li class="list-group-item">5.3 - Mostrando el listado de tareas</li>
-                                <li class="list-group-item">5.4 - Agregar una tarea a la lista</li>
-                                <li class="list-group-item">5.5 - Marcar una tarea como "realizada"</li>
-                                <li class="list-group-item">5.6 - Eliminar tareas de la lista</li>
-                            </ul>
-                        </div>
+                            <div class="accordion-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item">5.1 - Herencia de platillas e integración de archivos estáticos</li>
+                                    <li class="list-group-item">5.2 - Comunicación de la vista con los modelos</li>
+                                    <li class="list-group-item">5.3 - Presentación de datos en la platilla</li>
+                                    <li class="list-group-item">5.4 - Manejo de formularios</li>
+                                    <li class="list-group-item">5.5 - Creación de cuenta en digital ocean y despliegue de droplet</li>
+                                    <li class="list-group-item">5.6 - Configuración de proyecto final en digital ocean</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <h3 class="fw-bold mt-2">Acerca del curso</h3>
-                <p>Python es uno de los lenguajes más recomendados para comenzar en la programación porque es muy fácil de aprender
-                y tiene una sintaxis muy sencilla.</p>
+                <p>Configurar las mismas características una y otra vez es un trabajo tedioso que toma mucho tiempo: sistemas de autenticación, migraciones, crear la base de datos, etc. Django se encarga de esas tareas repetitivas y te permite crear aplicaciones web en poco tiempo, te ayuda a escalar de forma rápida y flexible, a evitar errores de seguridad comunes (inyección SQL, cross-site scripting, etc) y a crear módelos que automaticen muchos más procesos en sí.</p>
                 <a href="#" class="text-decoration-none text-light">Ver más</a>
 
                 <h3 class="fw-bold">Cursos relacionados</h3>
                 
                 <div class="row">
                     <div class="col-5 col-xxl-3">
-                        <img src="../img/django.webp" alt="angular" class="rounded img-fluid">
-                        <p class="fw-bold fs-14">Creación de interfaces con Django</p>
+                        <img src="../img/flask-2.png" alt="angular" class="rounded img-fluid">
+                        <p class="fw-bold fs-14">Desarrollo web con Flask</p>
                     </div>
                     <div class="col-5 col-xxl-3">
-                        <img src="../img/django.webp" alt="angular" class="rounded img-fluid">
-                        <p class="fw-bold fs-14">Creación de interfaces con Django</p>
+                        <img src="../img/flask-3.png" alt="angular" class="rounded img-fluid">
+                        <p class="fw-bold fs-14">Desarrollo avanzado con Flask</p>
+                    </div>
+                    <div class="col-5 col-xxl-3">
+                        <img src="../img/Python POO.png" alt="angular" class="rounded img-fluid">
+                        <p class="fw-bold fs-14">Programación orientada a objetos con Python</p>
                     </div>
                 </div>
             </div>
@@ -252,30 +277,27 @@
     
                 <p class="mt-5 mt-xxl-0">Este curso pertenece a</p>
                 <ul class="list-group list-unstyled">
-                    <li><a href="#" class="text-decoration-none">Programación desde cero</a></li>
-                    <li><a href="#" class="text-decoration-none">Ciencia de datos e introducción a la Inteligencia Artificial</a></li>
                     <li><a href="#" class="text-decoration-none">Backend con Python</a></li>
-                    <li><a href="#" class="text-decoration-none">Análisis de datos avanzado</a></li>
                 </ul>
 
                 <hr>
 
                 <p>Profesor de este curso</p>
-                <p>Kevin Guzmán</p>
+                <p>César Mayta</p>
 
                 <hr>
 
                 <p>¿Para quién es este curso</p>
                 <ul class="list-group list-unstyled">
-                    <li>Desarrolladores con experiencia que desean apredner Python</li>
-                    <li>Personas que empezarán en el mundo de la programación</li>
+                    <li>Programadores novatos que deseen aprender sobre desarrollo web para crear apps de forma rápida..</li>
                 </ul>
 
                 <hr>
 
                 <p>¿Que conocimientos previos necesitas?</p>
                 <ul class="list-group list-unstyled">
-                    <li><a href="#" class="text-decoration-none">Programación desde cero</a></li>
+                    <li><a href="#" class="text-decoration-none">Conocimientos básicos de Python</a></li>
+                    <li><a href="#" class="text-decoration-none">Conocimientos básicos de Programación orientada a objetos</a></li>
                 </ul>
 
             </div>
@@ -286,13 +308,13 @@
 
     <!-- Detalles de compra -->
     <div class="container mt-5">
-        <h2 class="text-center fw-bold">Empieza a aprender python desde cero 2023</h2>
+        <h2 class="text-center fw-bold">Empieza a aprender Django desde cero</h2>
         <p class="text-center">¿Aún no te decides? <a href="#" class="text-decoration-none">Mira una clase gratis</a></p>
         <p class="text-center">Mostrar precios en</p>
 
         <div class="row col-xxl-8 mx-xxl-auto justify-content-xxl-evenly">
 
-            <div class="course-info bg-dark-subtle rounded-4 col-11 p-0 mx-auto col-xxl-5">
+            <div class="border-top-success bg-dark-subtle rounded-4 col-11 p-0 mx-auto col-xxl-5">
                 <h3 class="fw-bold text-center mt-3">Sólo este curso</h3>
                 <h2 class="fw-bold text-center">$500</h2>
                 <button type="button" class="btn btn-outline-success mx-auto d-block mb-3 fw-bold">Success</button>
@@ -311,7 +333,7 @@
                 </ul>
             </div>
 
-            <div class="premium-info bg-dark-subtle rounded-4 col-11 p-0 mx-auto mt-3 mt-xxl-0 col-xxl-5">
+            <div class="border-top-warning bg-dark-subtle rounded-4 col-11 p-0 mx-auto mt-3 mt-xxl-0 col-xxl-5">
                 <h4 class="fw-bold text-center mt-3 text-warning">PREMIUM ANUAL</h4>
                 <button type="button" class="btn btn-outline-warning fw-bold bg-warning-subtle p-1 mx-auto d-block">
                     ¡Ahorras $2,400 MXN!</button>
@@ -365,55 +387,40 @@
                     <li class="align-items-start d-flex my-1 p-3">
                         <img src="../img/user.png" alt="user-icon" width="50" class="rounded-top-circle rounded-bottom-circle">
                         <div class="bg-secondary-subtle p-2 rounded ms-4">
-                            <p>Carlos Guzmán <span>@cags 84</span></p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, et!</p>
+                            <p>Omar Fazzito <span>@omarfazzito</span></p>
+                            <p>basico pero fundamental para alguien que inicia en Django</p>
                         </div>
                     </li>
                     <li class="align-items-start d-flex my-1 p-3">
-                        <img src="../img/user.png" alt="user-icon" width="50" class="rounded-top-circle rounded-bottom-circle">
+                        <img src="../img/user-2.png" alt="user-icon" width="50" class="rounded-top-circle rounded-bottom-circle">
                         <div class="bg-secondary-subtle p-2 rounded ms-4">
-                            <p>Carlos Guzmán <span>@cags 84</span></p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, et!</p>
+                            <p>Carlos Alberto Moreno <span>@morenocarloscat-2511</span></p>
+                            <p>La verdad el curso es bastante didactico. Me encantaria que contesten las dudas. Quiero culminarlo completo.</p>
                         </div>
                     </li>
                     <li class="align-items-start d-flex my-1 p-3">
-                        <img src="../img/user.png" alt="user-icon" width="50" class="rounded-top-circle rounded-bottom-circle">
+                        <img src="../img/user-3.png" alt="user-icon" width="50" class="rounded-top-circle rounded-bottom-circle">
                         <div class="bg-secondary-subtle p-2 rounded ms-4">
-                            <p>Carlos Guzmán <span>@cags 84</span></p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, et!</p>
+                            <p>Usuario Anónimo <span>@ifttkcpkfjknpnzfrcaus</span></p>
+                            <p>Exclente curso de desarrollo web con Django / Python.</p>
                         </div>
                     </li>
                     <li class="align-items-start d-flex my-1 p-3">
-                        <img src="../img/user.png" alt="user-icon" width="50" class="rounded-top-circle rounded-bottom-circle">
+                        <img src="../img/user-4.png" alt="user-icon" width="50" class="rounded-top-circle rounded-bottom-circle">
                         <div class="bg-secondary-subtle p-2 rounded ms-4">
-                            <p>Carlos Guzmán <span>@cags 84</span></p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, et!</p>
+                            <p>Carlos Vargas <span>@carlosvargas</span></p>
+                            <p>Muy buena explicación del profesor, se entendió y se hizo sencilla la implementación del framework.</p>
                         </div>
                     </li>
                     <li class="align-items-start d-flex my-1 p-3">
-                        <img src="../img/user.png" alt="user-icon" width="50" class="rounded-top-circle rounded-bottom-circle">
+                        <img src="../img/user-5.webp" alt="user-icon" width="50" class="rounded-top-circle rounded-bottom-circle">
                         <div class="bg-secondary-subtle p-2 rounded ms-4">
-                            <p>Carlos Guzmán <span>@cags 84</span></p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, et!</p>
-                        </div>
-                    </li>
-                    <li class="align-items-start d-flex my-1 p-3">
-                        <img src="../img/user.png" alt="user-icon" width="50" class="rounded-top-circle rounded-bottom-circle">
-                        <div class="bg-secondary-subtle p-2 rounded ms-4">
-                            <p>Carlos Guzmán <span>@cags 84</span></p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, et!</p>
-                        </div>
-                    </li>
-                    <li class="align-items-start d-flex my-1 p-3">
-                        <img src="../img/user.png" alt="user-icon" width="50" class="rounded-top-circle rounded-bottom-circle">
-                        <div class="bg-secondary-subtle p-2 rounded ms-4">
-                            <p>Carlos Guzmán <span>@cags 84</span></p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, et!</p>
+                            <p>Henry Carlos <span>@henrycarlos74278</span></p>
+                            <p>Excelente profesor, solo que eh tendio problema con los repositorios o herramientas de los cursos que no estaban de acuerdo al profesor y eso me debando tiempo en la espera.</p>
                         </div>
                     </li>
                     <a href="#" class="text-decoration-none text-center fs-4 mb-3">Ver más opiniones</a>
                 </ul>
-
 
             </div>
 
@@ -445,121 +452,81 @@
     </div>
 
     <!-- Menu de navegación para el pie de página -->
-        <div class="row bg-dark px-3 py-4">
-            <div class="col-xxl-2">
-                <h5 class="fw-bold text-light">EDteam</h5>
-                <p class="text-light fw-light fs-14">Estas usando EDteam en</p>
+    <div class="row bg-dark px-3 py-4">
+        <div class="col-xxl-2">
+            <h5 class="fw-bold text-light">EDteam</h5>
+            <p class="text-light fw-light fs-14">Estas usando EDteam en</p>
+        </div>
+        
+        <div class="row col-xxl-10">
+            <div class="col-6 col-xxl-3 bg-dark">
+                <h6 class="fw-bold text-light">Acerca de la empresa</h6>
+                <ul class="list-group list-unstyled">
+                    <li><a href="#" class="text-decoration-none text-dark-emphasis">¿Que es EDteam?</a></li>
+                    <li><a href="#" class="text-decoration-none text-dark-emphasis">El equipo</a></li>
+                    <li><a href="#" class="text-decoration-none text-dark-emphasis">¡Sé parte del team!</a></li>
+                    <li><a href="#" class="text-decoration-none text-dark-emphasis">Los profesores</a></li>
+                    <li><a href="#" class="text-decoration-none text-dark-emphasis">Trabaja como profesor</a></li>
+                    <li><a href="#" class="text-decoration-none text-dark-emphasis">Enunciado de emisión</a></li>
+                    <li><a href="#" class="text-decoration-none text-dark-emphasis">Marca y logotipo</a></li>
+                    <li><a href="#" class="text-decoration-none text-dark-emphasis">Cultura</a></li>
+                </ul>
             </div>
-            
-            <div class="row col-xxl-10">
-                <div class="col-6 col-xxl-3 bg-dark">
-                    <h6 class="fw-bold text-light">Acerca de la empresa</h6>
-                    <ul class="list-group list-unstyled">
-                        <li><a href="#" class="text-decoration-none text-dark-emphasis">¿Que es EDteam?</a></li>
-                        <li><a href="#" class="text-decoration-none text-dark-emphasis">El equipo</a></li>
-                        <li><a href="#" class="text-decoration-none text-dark-emphasis">¡Sé parte del team!</a></li>
-                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Los profesores</a></li>
-                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Trabaja como profesor</a></li>
-                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Enunciado de emisión</a></li>
-                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Marca y logotipo</a></li>
-                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Cultura</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-xxl-3 bg-dark">
-                    <h6 class="fw-bold text-light">Conecta con EDteam</h6>
-                    <ul class="list-group list-unstyled">
-                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Soporte al cliente</a></li>
-                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Política de privacidad</a></li>
-                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Terminos y condiciones</a></li>
-                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Política de reembolsos</a></li>
-                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Servicios para colegios y universidades</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 mt-3 mt-xxl-0 col-xxl-3 bg-dark">
-                    <h6 class="fw-bold text-light">Nuestros productos</h6>
-                    <ul class="list-group list-unstyled">
-                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Servicios para empresas</a></li>
-                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Canjea cupones</a></li>
-                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Regala cursos</a></li>
-                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Sube a premium</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 mt-3 mt-xxl-0 col-xxl-3 bg-dark">
-                    <h6 class="fw-bold text-light">Recursos gratis</h6>
-                    <ul class="list-group list-unstyled">
-                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Cursos gratis</a></li>
-                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Blog</a></li>
-                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Conferencias</a></li>
-                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Comunidad</a></li>
-                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Como instalar la App de EDteam</a></li>
-                        <li><a href="#" class="text-decoration-none text-dark-emphasis">Firmas de correo</a></li>
-                    </ul>
-                </div>
+            <div class="col-6 col-xxl-3 bg-dark">
+                <h6 class="fw-bold text-light">Conecta con EDteam</h6>
+                <ul class="list-group list-unstyled">
+                    <li><a href="#" class="text-decoration-none text-dark-emphasis">Soporte al cliente</a></li>
+                    <li><a href="#" class="text-decoration-none text-dark-emphasis">Política de privacidad</a></li>
+                    <li><a href="#" class="text-decoration-none text-dark-emphasis">Terminos y condiciones</a></li>
+                    <li><a href="#" class="text-decoration-none text-dark-emphasis">Política de reembolsos</a></li>
+                    <li><a href="#" class="text-decoration-none text-dark-emphasis">Servicios para colegios y universidades</a></li>
+                </ul>
+            </div>
+            <div class="col-6 mt-3 mt-xxl-0 col-xxl-3 bg-dark">
+                <h6 class="fw-bold text-light">Nuestros productos</h6>
+                <ul class="list-group list-unstyled">
+                    <li><a href="#" class="text-decoration-none text-dark-emphasis">Servicios para empresas</a></li>
+                    <li><a href="#" class="text-decoration-none text-dark-emphasis">Canjea cupones</a></li>
+                    <li><a href="#" class="text-decoration-none text-dark-emphasis">Regala cursos</a></li>
+                    <li><a href="#" class="text-decoration-none text-dark-emphasis">Sube a premium</a></li>
+                </ul>
+            </div>
+            <div class="col-6 mt-3 mt-xxl-0 col-xxl-3 bg-dark">
+                <h6 class="fw-bold text-light">Recursos gratis</h6>
+                <ul class="list-group list-unstyled">
+                    <li><a href="#" class="text-decoration-none text-dark-emphasis">Cursos gratis</a></li>
+                    <li><a href="#" class="text-decoration-none text-dark-emphasis">Blog</a></li>
+                    <li><a href="#" class="text-decoration-none text-dark-emphasis">Conferencias</a></li>
+                    <li><a href="#" class="text-decoration-none text-dark-emphasis">Comunidad</a></li>
+                    <li><a href="#" class="text-decoration-none text-dark-emphasis">Como instalar la App de EDteam</a></li>
+                    <li><a href="#" class="text-decoration-none text-dark-emphasis">Firmas de correo</a></li>
+                </ul>
             </div>
         </div>
+    </div>
 
-        <hr class="my-0">
+    <hr class="my-0">
 
-        <!-- Iconos finales de pie de página -->
-        <div class="row justify-content-xxl-between bg-dark px-5 py-5">
+    <!-- Iconos finales de pie de página -->
+    <div class="row justify-content-xxl-between bg-dark px-5 pt-5 row-footer">
 
-            <ul class="list-group flex-row fs-12-9 justify-content-between px-3 px-xxl-0 col-xxl-5 mb-3 mb-xxl-0 text-dark-emphasis">
-                <li class="list-unstyled">Lima - Perú</li>
-                <li>Bogotá - Colombia</li>
-                <li>Cochabamba - Bolivia</li>
-            </ul>
+        <ul class="list-group flex-row fs-12-9 justify-content-between px-3 px-xxl-0 col-xxl-5 mb-3 mb-xxl-0 text-dark-emphasis">
+            <li class="list-unstyled">Lima - Perú</li>
+            <li>Bogotá - Colombia</li>
+            <li>Cochabamba - Bolivia</li>
+        </ul>
 
-            <ul class="list-group flex-row justify-content-center justify-content-xxl-end list-unstyled gap-2 col-xxl-5 pe-0 gap-4">
-                <li><img src="../img/slack.svg" alt="slack-icon" class="rounded-bottom-circle rounded-top-circle" width="30"></li>
-                <li><img src="../img/youtube.svg" alt="youtube-icon" class="rounded-bottom-circle rounded-top-circle" width="30"></li>
-                <li><img src="../img/tiktok.svg" alt="tiktok-icon" class="rounded-bottom-circle rounded-top-circle" width="30"></li>
-                <li><img src="../img/instagram.svg" alt="instagram-icon" class="rounded-bottom-circle rounded-top-circle" width="30"></li>
-                <li><img src="../img/linkedin.svg" alt="linkedin-icon" class="rounded-bottom-circle rounded-top-circle" width="30"></li>
-                <li><img src="../img/twitter.svg" alt="twitter-icon" class="rounded-bottom-circle rounded-top-circle" width="30"></li>
-                <li><img src="../img/github.svg" alt="github-icon" class="rounded-bottom-circle rounded-top-circle" width="30"></li>
-                <li><img src="../img/whatsapp.svg" alt="whatsapp-icon" class="rounded-bottom-circle rounded-top-circle" width="30"></li>
-            </ul>
-        </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+        <ul class="list-group flex-row justify-content-center justify-content-xxl-end list-unstyled gap-2 col-xxl-5 pe-0 gap-4">
+            <li><img src="../img/slack.svg" alt="slack-icon" class="rounded-bottom-circle rounded-top-circle" width="30"></li>
+            <li><img src="../img/youtube.svg" alt="youtube-icon" class="rounded-bottom-circle rounded-top-circle" width="30"></li>
+            <li><img src="../img/tiktok.svg" alt="tiktok-icon" class="rounded-bottom-circle rounded-top-circle" width="30"></li>
+            <li><img src="../img/instagram.svg" alt="instagram-icon" class="rounded-bottom-circle rounded-top-circle" width="30"></li>
+            <li><img src="../img/linkedin.svg" alt="linkedin-icon" class="rounded-bottom-circle rounded-top-circle" width="30"></li>
+            <li><img src="../img/twitter.svg" alt="twitter-icon" class="rounded-bottom-circle rounded-top-circle" width="30"></li>
+            <li><img src="../img/github.svg" alt="github-icon" class="rounded-bottom-circle rounded-top-circle" width="30"></li>
+            <li><img src="../img/whatsapp.svg" alt="whatsapp-icon" class="rounded-bottom-circle rounded-top-circle" width="30"></li>
+        </ul>
+    </div>
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
